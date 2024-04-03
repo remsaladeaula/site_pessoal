@@ -1,5 +1,4 @@
 name: "R-em-sala"
-output_dir: "."
 navbar:
   title: "R em sala de aula"
   left:
@@ -8,3 +7,5 @@ navbar:
     - text: "About Me"
       href: about.html
       
+output_dir:
+    html_document:
