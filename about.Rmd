@@ -11,11 +11,11 @@ title: "Bugs, histórias, Etc & tal"
 
 ## Sobre o autor do blog
 
-Sou professor de Física da rede pública estadual do Ceará. Tenho mestrado em Ensino de Física (MNPEF) e nos últimos anos tenho me dedicado a escrever sobre programação. Em 2023 publiquei o livro [Julia com física: uma introdução](https://www.seduc.ce.gov.br/wp-content/uploads/sites/37/2023/09/Ebook-02-Julia-com-Fisica.pdf) e em 2024 lançarei o livro *Modelagem computacional com o Web VPYthon:Mecânica*. A iniciativa de começar a escrever este blog se deu pela necessidade de aprender a trabalhar com planilhas em R. Estou super motivado a começar essa viagem. Caso tenha interesse também mantenho outro blog [Julia com física](https://juliacomfisica.github.io/). Essas e outras produções estão listadas no [meu site pessoal](https://adeil83.github.io/).
+Sou professor de Física da rede pública estadual do Ceará. Tenho mestrado em Ensino de Física (MNPEF) e nos últimos anos tenho me dedicado a escrever sobre programação. Em 2023 publiquei o livro [Julia com física: uma introdução](https://www.seduc.ce.gov.br/wp-content/uploads/sites/37/2023/09/Ebook-02-Julia-com-Fisica.pdf) e em 2024 lançarei o livro *Modelagem computacional com o Web VPython: Mecânica*. A iniciativa de começar a escrever este blog se deu pela necessidade de aprender a trabalhar com planilhas em R. Estou super motivado a começar essa viagem. Caso tenha interesse também mantenho outro blog [Julia com física](https://juliacomfisica.github.io/). Essas e outras produções estão listadas no [meu site pessoal](https://adeil83.github.io/).
 
 ## Referência para construção deste blog
 
-Para construir este blog utilizei como referência o blog Live Free or Dichotomize[How to make an R Markdown website (with RStudio!)](https://livefreeordichotomize.com/posts/2017-08-08-how-to-make-an-rmarkdown-website/index.html) seguindo as intruções passo a passo você conseguirá construir seu blog com R Markdown também. Se quiser, é claro!
+Para construir este blog utilizei como referência o blog Live Free or Dichotomize [How to make an R Markdown website (with RStudio!)](https://livefreeordichotomize.com/posts/2017-08-08-how-to-make-an-rmarkdown-website/index.html) seguindo as intruções passo a passo você conseguirá construir seu blog com R Markdown também. Se quiser, é claro!
 
 ## Um pouco de história da liguagem R
 
