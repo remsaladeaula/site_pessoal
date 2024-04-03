@@ -1,6 +1,6 @@
 ---
 title: "about.Rmd"
-author: "Adeil Araújo"
+author: "Professor: Adeil Araújo"
 date: "03 de abril de 2024"
 output: html_document
 ---
