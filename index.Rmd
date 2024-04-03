@@ -1,14 +1,44 @@
 ---
 title: "index.Rmd"
-author: "Adeil Araújo"
-date: "03-04-2024"
+author: "Professor: Adeil Araújo"
+date: "03 de abril de 2024"
 output: html_document
 ---
 
 ---
 title: "R em sala de aula"
 ---
+![](http://r-project.org/logo/Rlogo.png){width=3cm, height=1cm}
 
-Neste blog pretendemos dar insights para que professores possam utilizar a linguagem R em sala de aula.
+Neste blog pretendo dar *insights* para que professores possam utilizar a linguagem R em sala de aula.
 
-oiiiiii
+## Uso remoto do R
+
+Para criar este blog estou utilizando o R instalado na minha máquina. Porém, caso você não queira instalar na ou esteja utilizando um computador público: laboratório de informática, casa de amigos, etc. aconselho a usar o [RStudio Cloud](https://posit.cloud/).Você pode fazer o login com sua conta do Gmail ou do Github.
+
+## R como calculadora
+
+```
+3+1 #adição
+## [1] 4
+
+5-3 #subtração
+## [1] 2
+
+6*4 #multiplicação
+## [1] 24
+
+35/7 #divisão
+## [1] 5 
+
+3^2 #potência
+## [1] 9
+
+sqrt(81) #raiz
+## [1] 9
+
+log2(8) #log na base 2
+## [1] 3
+
+```
+
