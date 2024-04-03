@@ -1,0 +1,10 @@
+name: "R-em-sala"
+output_dir: "."
+navbar:
+  title: "R em sala de aula"
+  left:
+    - text: "Home"
+      href: index.html
+    - text: "About Me"
+      href: about.html
+      

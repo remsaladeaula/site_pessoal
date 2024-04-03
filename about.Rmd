@@ -1,0 +1,14 @@
+---
+title: "about.Rmd"
+author: "Adeil Araújo"
+date: "2024-04-03"
+output: html_document
+---
+
+---
+title: "Bugs, Etc & tal"
+---
+
+Salinha da bagunça: Aqui teremos dicas de livros, eventos, Bugs e muito mais.
+
+

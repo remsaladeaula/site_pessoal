@@ -1,0 +1,12 @@
+---
+title: "index.Rmd"
+author: "Adeil Araújo"
+date: "03-04-2024"
+output: html_document
+---
+
+---
+title: "R em sala de aula"
+---
+
+Neste blog pretendemos dar insights para que professores possam utilizar a linguagem R em sala de aula.
