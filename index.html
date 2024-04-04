@@ -263,7 +263,7 @@ $(document).ready(function () {
 
 <h1 class="title toc-ignore">R em sala de aula</h1>
 <h4 class="author">Professor: Adeil Araújo</h4>
-<h4 class="date">03 de abril de 2024</h4>
+<h4 class="date"><em>Blog construído com R Markdown</em></h4>
 
 </div>
 
@@ -275,7 +275,7 @@ utilizar a linguagem R em sala de aula.</p>
 <div id="uso-remoto-do-r" class="section level2">
 <h2>Uso remoto do R</h2>
 <p>Para criar este blog estou utilizando o R instalado na minha máquina.
-Porém, caso você não queira instalar na ou esteja utilizando um
+Porém, caso você não queira instalar na sua ou esteja utilizando um
 computador público: laboratório de informática, casa de amigos, etc.
 aconselho a usar o <a href="https://posit.cloud/">RStudio Cloud</a>.Você
 pode fazer o login com sua conta do Gmail ou do Github.</p>
@@ -303,6 +303,35 @@ sqrt(81) #raiz
 log2(8) #log na base 2
 ## [1] 3
 </code></pre>
+</div>
+<div id="resolvendo-problemas-de-física-básica" class="section level2">
+<h2>Resolvendo problemas de física básica</h2>
+<p><strong>Enunciado 1</strong></p>
+<p>Em 1971, o astronauta americano David Scott realizou, na superfície
+da Lua, o experimento de queda livre dos corpos no vácuo, anteriormente
+proposto por Galileu. Deixou cair ali uma pena e um martelo,
+simultaneamente, a partir da mesma posição. Supondo que ambos os objetos
+tenham sido soltos de uma altura de 1,6 m em relação à superfície,
+depois de quanto tempo martelo alcançaria o solo? Dado: aceleração da
+gravidade na Lua <span class="math inline">\(\simeq\)</span>
+1,6m/s<sup>2</sup>.</p>
+<p><em>Resolução:</em></p>
+<pre><code># Dados
+v0 &lt;- 0 # Velocidade inicial (partiu do repouso)
+h &lt;- 1.6 # Altura de queda (em metros)
+a &lt;- 1.6 # Aceleração da gravidade na Lua (em m/s^2)
+
+# Calculando o tempo (usando a fórmula)
+t &lt;- sqrt(2 * h / a)
+
+# Exibindo o resultado
+cat(&quot;O martelo levaria aproximadamente&quot;, round(t, 2), &quot;segundos para alcançar o solo na Lua.&quot;)</code></pre>
+<p>A saída para este programa é:</p>
+<p><strong>O martelo levaria aproximadamente 1.41 segundos para alcançar
+o solo na Lua.</strong></p>
+<p>Veja o vídeo deste momento histórico:</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_Zo9jIzAssA?si=EBQuNOEgGQ1Bdzpi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+</iframe>
 </div>
 
 

@@ -1,7 +1,7 @@
 ---
 title: "about.Rmd"
 author: "Professor: Adeil Araújo"
-date: "03 de abril de 2024"
+date: "*Blog construído com R Markdown*"
 output: html_document
 ---
 

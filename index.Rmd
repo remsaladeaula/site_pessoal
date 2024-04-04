@@ -1,7 +1,7 @@
 ---
 title: "index.Rmd"
 author: "Professor: Adeil Araújo"
-date: "03 de abril de 2024"
+date: "*Blog construído com R Markdown*"
 output: html_document
 ---
 
@@ -14,7 +14,7 @@ Neste blog pretendo dar *insights* para que professores possam utilizar a lingua
 
 ## Uso remoto do R
 
-Para criar este blog estou utilizando o R instalado na minha máquina. Porém, caso você não queira instalar na ou esteja utilizando um computador público: laboratório de informática, casa de amigos, etc. aconselho a usar o [RStudio Cloud](https://posit.cloud/).Você pode fazer o login com sua conta do Gmail ou do Github.
+Para criar este blog estou utilizando o R instalado na minha máquina. Porém, caso você não queira instalar na sua ou esteja utilizando um computador público: laboratório de informática, casa de amigos, etc. aconselho a usar o [RStudio Cloud](https://posit.cloud/).Você pode fazer o login com sua conta do Gmail ou do Github.
 
 ## R como calculadora
 
@@ -41,4 +41,30 @@ log2(8) #log na base 2
 ## [1] 3
 
 ```
+## Resolvendo problemas de física básica
 
+**Enunciado 1**
+
+Em 1971, o astronauta americano David Scott realizou, na superfície da Lua, o experimento de queda livre dos corpos no vácuo, anteriormente proposto por Galileu. Deixou cair ali uma pena e um martelo, simultaneamente, a partir da mesma posição. Supondo que ambos os objetos tenham sido soltos de uma altura de 1,6 m em relação à superfície, depois de quanto tempo martelo alcançaria o solo? Dado: aceleração da gravidade na Lua $\simeq$ 1,6m/s^2^.
+
+*Resolução:*
+
+```
+# Dados
+v0 <- 0 # Velocidade inicial (partiu do repouso)
+h <- 1.6 # Altura de queda (em metros)
+a <- 1.6 # Aceleração da gravidade na Lua (em m/s^2)
+
+# Calculando o tempo (usando a fórmula)
+t <- sqrt(2 * h / a)
+
+# Exibindo o resultado
+cat("O martelo levaria aproximadamente", round(t, 2), "segundos para alcançar o solo na Lua.")
+```
+A saída para este programa é: 
+
+**O martelo levaria aproximadamente 1.41 segundos para alcançar o solo na Lua.**
+
+Veja o vídeo deste momento histórico: 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_Zo9jIzAssA?si=EBQuNOEgGQ1Bdzpi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
