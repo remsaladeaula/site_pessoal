@@ -22,3 +22,11 @@ Para construir este blog utilizei como referência o blog Live Free or Dichotomi
 A linguagem R, nasceu nos anos 90, mas se popularizou mesmo nos anos 2000 quando **R**oss Ihaka e **R**obert Gentleman, professores de estatítica da Nova Zelândia trouxeram ao púlico a primeira versão da linguagem. No livro *Utilizando a linguagem R: conceitos, manipulação, modelagem e elaboração de relatórios* a autora Luciene Ferreira conta que "*Talvez por conincidência, as iniciais do nome desses professores iniciam pela letra R, uma boa hipótese para terem nomeado a linguagem de R*"
 
 Link para aquisição do livro na [Amazon](https://www.amazon.com.br/Utilizando-linguagem-manipula%C3%A7%C3%A3o-visualiza%C3%A7%C3%A3o-elabora%C3%A7%C3%A3o/dp/8550814423).
+
+## Material para estudo
+
+O **PET Estatística da Universidade Federal do Ceará - UFC possui uma atividade com R nas escolas.
+
+*"Nessa atividade desenvolvemos a prática da matemática básica e da estatística com o uso do programa computacional R nas escolas de ensino médio da rede pública de Fortaleza. Anualmente, os membros do PET Estatística entram em contato com escolas públicas da cidade objetivando a concordância para ministrar as aulas. Caso sua escola esteja interessada em marcar um minicurso do software R, entre em contato conosco"*
+
+Na página do [PET Estatítica](https://sites.google.com/view/petestatisticaufc/atividades) você consegue baixar uma [apostila](https://drive.google.com/file/d/1koBbKSarTit1jUBt0jLrGnjF3TMLCu7s/view) de introdução à R para escolas.Visite!

@@ -3,7 +3,7 @@ output_dir: "."
 navbar:
   title: "R em sala de aula"
   left:
-    - text: "Home"
+    - text: "Blog"
       href: index.html
-    - text: "About Me"
+    - text: "Bugs, histórias, Etc & tal"
       href: about.html
