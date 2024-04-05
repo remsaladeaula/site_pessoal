@@ -1,7 +1,7 @@
 ---
 title: "index.Rmd"
 author: "Professor: Adeil Araújo"
-date: "*Blog construído com R Markdown*"
+date: "*Blog construído com R e R Markdown*"
 output: 
   html_document:
     theme: united
@@ -14,22 +14,19 @@ output:
 title: "R em sala de aula"
 ---
 ![](http://r-project.org/logo/Rlogo.png){width=3cm, height=1cm}
+![](https://privefl.github.io/R-presentation/rmarkdown.png){width=5cm, height=1cm}
 
 Neste blog pretendo dar *insights* para que professores possam utilizar a linguagem R em sala de aula.
 
-1. Uso remoto do R
-2. R como calculadora
-3. Resolvendo problemas de física básica
-
 ---
 
-## 1. Uso remoto do R
+## Uso remoto do R
 
 Para criar este blog estou utilizando o R instalado na minha máquina. Porém, caso você não queira instalá-lo na sua ou esteja utilizando um computador público: laboratório de informática, casa de amigos, etc. aconselho a usar o [RStudio Cloud](https://posit.cloud/).Você pode fazer o login com sua conta do Gmail ou do Github.
 
 ---
 
-## 2. R como calculadora
+## R como calculadora
 
 ```
 3+1 #adição
@@ -56,7 +53,7 @@ log2(8) #log na base 2
 ```
 ---
 
-## 3. Resolvendo problemas de física básica
+## Resolvendo problemas de física básica
 
 **Enunciado 1**
 
