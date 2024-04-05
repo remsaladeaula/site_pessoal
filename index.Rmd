@@ -22,7 +22,7 @@ Neste blog pretendo dar *insights* para que professores possam utilizar a lingua
 
 ## Uso remoto do R
 
-Para criar este blog estou utilizando o R instalado na minha máquina. Porém, caso você não queira instalá-lo na sua ou esteja utilizando um computador público: laboratório de informática, casa de amigos, etc. aconselho a usar o [RStudio Cloud](https://posit.cloud/).Você pode fazer o login com sua conta do Gmail ou do Github.
+Para criar este blog estou utilizando o R instalado na minha máquina. Porém, caso você não queira instalá-lo na sua ou esteja utilizando um computador público: laboratório de informática, casa de amigos, etc. aconselho a usar o [RStudio Cloud](https://posit.cloud/). Nele Você pode fazer o login com sua conta do Gmail ou do Github e acessar o R na nuvem.
 
 ---
 
