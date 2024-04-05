@@ -81,5 +81,41 @@ Veja o vídeo deste momento histórico:
 
 <iframe width="320" height="315" src="https://www.youtube.com/embed/_Zo9jIzAssA?si=EBQuNOEgGQ1Bdzpi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+**Enunciado 2**
+
+Sabe-se que a temperatura na qual o papel entra em combustão é de 233^0^C. O título de um famoso livro de ficção científica é o valor aproximado desta temperatura na escala Fahrenheit. Qual é o título deste livro?
+
+a. Fahrenheit 451.
+b. Fahrenheit 212.
+c. Fahrenheit 46,6.
+d. Fahrenheit 419.
+e. Fahrenheit 233.
+
+*Resolução:*
+
+```
+# Dados
+TC <- 233 # Temperatura em celsius
+
+# Calculando a temperatura em fahrenheit (usando a fórmula)
+TF <- (9*TC+160)/5
+
+# Exibindo o resultado
+cat("O título do livro é Fahrenheit",round(TF, 0),".")
+```
+A saída para este programa é: 
+
+**O título do livro é Fahrenheit 451 .**
+
+**Veja também:**
+
+* A verdadeira história da **Escala Celcius**: 
+
+<iframe width="320" height="315" src="https://www.youtube.com/embed/rjht4oAByCI?si=GsTnfAz2gubkOw4-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+* A verdadeira história da **Escala Fahrenheit**: 
+
+<iframe width="320" height="315" src="https://www.youtube.com/embed/LgrXd0NM2y8?si=HMooYlT_Z8cs4-wa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
 ---
 
