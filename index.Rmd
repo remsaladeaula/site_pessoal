@@ -2,7 +2,12 @@
 title: "index.Rmd"
 author: "Professor: Adeil Araújo"
 date: "*Blog construído com R Markdown*"
-output: html_document
+output: 
+  html_document:
+    theme: united
+    toc: yes
+    toc_float:
+      collapsed: true
 ---
 
 ---
