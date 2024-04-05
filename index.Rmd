@@ -18,13 +18,13 @@ Neste blog pretendo dar *insights* para que professores possam utilizar a lingua
 
 ---
 
-## Uso remoto do R
+## 1. Uso remoto do R
 
-Para criar este blog estou utilizando o R instalado na minha máquina. Porém, caso você não queira instalar na sua ou esteja utilizando um computador público: laboratório de informática, casa de amigos, etc. aconselho a usar o [RStudio Cloud](https://posit.cloud/).Você pode fazer o login com sua conta do Gmail ou do Github.
+Para criar este blog estou utilizando o R instalado na minha máquina. Porém, caso você não queira instalá-lo na sua ou esteja utilizando um computador público: laboratório de informática, casa de amigos, etc. aconselho a usar o [RStudio Cloud](https://posit.cloud/).Você pode fazer o login com sua conta do Gmail ou do Github.
 
 ---
 
-## R como calculadora
+## 2. R como calculadora
 
 ```
 3+1 #adição
@@ -51,7 +51,7 @@ log2(8) #log na base 2
 ```
 ---
 
-## Resolvendo problemas de física básica
+## 3. Resolvendo problemas de física básica
 
 **Enunciado 1**
 
@@ -78,3 +78,6 @@ A saída para este programa é:
 Veja o vídeo deste momento histórico: 
 
 <iframe width="320" height="315" src="https://www.youtube.com/embed/_Zo9jIzAssA?si=EBQuNOEgGQ1Bdzpi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+---
+
