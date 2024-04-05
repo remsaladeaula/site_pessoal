@@ -25,7 +25,7 @@ Link para aquisição do livro na [Amazon](https://www.amazon.com.br/Utilizando-
 
 ## Material para estudo
 
-O **PET Estatística da Universidade Federal do Ceará - UFC possui uma atividade com R nas escolas.
+O **PET Estatística** da Universidade Federal do Ceará - UFC possui uma atividade com R nas escolas.
 
 *"Nessa atividade desenvolvemos a prática da matemática básica e da estatística com o uso do programa computacional R nas escolas de ensino médio da rede pública de Fortaleza. Anualmente, os membros do PET Estatística entram em contato com escolas públicas da cidade objetivando a concordância para ministrar as aulas. Caso sua escola esteja interessada em marcar um minicurso do software R, entre em contato conosco"*
 
