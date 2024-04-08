@@ -412,9 +412,17 @@ cat(&quot;O martelo levaria aproximadamente&quot;, round(t, 2), &quot;segundos p
 o solo na Lua.</strong></p>
 <p>Vou analisar o código linha por linha:</p>
 <ol style="list-style-type: decimal">
-<li><p>v0 &lt;- 0: Aqui, estamos definindo a velocidade inicial do
-objeto. No caso, o objeto parte do repouso, então a velocidade inicial é
-zero.</p></li>
+<li>v0 &lt;- 0: Aqui, estamos definindo a velocidade inicial do objeto.
+No caso, o objeto parte do repouso, então a velocidade inicial é
+zero.</li>
+</ol>
+<p><strong>obs.:</strong> <em>O símbolo “&lt;-” em R é chamado de
+operador de atribuição. Ele é usado para atribuir valores a variáveis.
+Além do operador “&lt;-”, você também pode usar o sinal de igual “=”
+para atribuição.No entanto, a preferência na comunidade de programação R
+é usar a seta “&lt;-” para evitar confusões com outros contextos onde o
+sinal de igual é usado (como comparações).</em></p>
+<ol start="2" style="list-style-type: decimal">
 <li><p>h &lt;- 1.6: Essa linha define a altura de queda do objeto. A
 altura é especificada em metros e, no exemplo, é igual a 1,6
 metros.</p></li>
@@ -427,12 +435,13 @@ livre: <span class="math display">\[ t = \sqrt{\frac{2h}{a}}
 \]</span></p></li>
 </ol>
 <p>onde (h) é a altura e (a) é a aceleração da gravidade.</p>
+<p>Por fim, exibimos o resultado calculado com o comando
+<code>cat</code>:</p>
 <ol start="5" style="list-style-type: decimal">
 <li>cat(“O martelo levaria aproximadamente”, round(t, 2), “segundos para
-alcançar o solo na Lua.”): Por fim, exibimos o resultado calculado. O
-tempo é arredondado para duas casas decimais e apresentado em segundos.
-Neste caso, o martelo levaria aproximadamente X segundos para alcançar o
-solo na Lua.</li>
+alcançar o solo na Lua.”):O tempo é arredondado para duas casas decimais
+e apresentado em segundos. Neste caso, o martelo levaria aproximadamente
+1,41s segundos para alcançar o solo na Lua.</li>
 </ol>
 <p>Veja o vídeo deste momento histórico:</p>
 <iframe width="320" height="315" src="https://www.youtube.com/embed/_Zo9jIzAssA?si=EBQuNOEgGQ1Bdzpi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
@@ -472,7 +481,7 @@ TC + 160}{5} \]</span> O resultado é armazenado na variável TF.</li>
 <li>cat(“O título do livro é”, round(TF, 0), “.”): Por fim, exibimos o
 resultado calculado. A frase “O título do livro é” é seguida pelo valor
 da temperatura em Fahrenheit, arredondado conforme necessário. Neste
-caso, o resultado seria algo como “O título do livro é 451.4.”
+caso, o resultado seria algo como “O título do livro é Fahrenheit 451.”
 (dependendo do arredondamento).</li>
 </ol>
 <p>A expressão round(TF, 0) arredonda o valor de TF para o inteiro mais
