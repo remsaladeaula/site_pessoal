@@ -429,11 +429,11 @@ livre: <span class="math display">\[ t = \sqrt{\frac{2h}{a}}
 <p>onde (h) é a altura e (a) é a aceleração da gravidade.</p>
 <ol start="5" style="list-style-type: decimal">
 <li>cat(“O martelo levaria aproximadamente”, round(t, 2), “segundos para
-alcançar o solo na Lua.”):</li>
+alcançar o solo na Lua.”): Por fim, exibimos o resultado calculado. O
+tempo é arredondado para duas casas decimais e apresentado em segundos.
+Neste caso, o martelo levaria aproximadamente X segundos para alcançar o
+solo na Lua.</li>
 </ol>
-<p>Por fim, exibimos o resultado calculado. O tempo é arredondado para
-duas casas decimais e apresentado em segundos. Neste caso, o martelo
-levaria aproximadamente X segundos para alcançar o solo na Lua.</p>
 <p>Veja o vídeo deste momento histórico:</p>
 <iframe width="320" height="315" src="https://www.youtube.com/embed/_Zo9jIzAssA?si=EBQuNOEgGQ1Bdzpi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
 </iframe>
@@ -460,6 +460,24 @@ TF &lt;- (9*TC+160)/5
 cat(&quot;O título do livro é Fahrenheit&quot;,round(TF, 0),&quot;.&quot;)</code></pre>
 <p>A saída para este programa é:</p>
 <p><strong>O título do livro é Fahrenheit 451 .</strong></p>
+<p>Vou analisar o código linha por linha:</p>
+<ol style="list-style-type: decimal">
+<li>TC &lt;- 233: Nesta linha, estamos atribuindo um valor à variável
+TC, que representa a temperatura em graus Celsius. No exemplo, o valor é
+233.</li>
+<li>TF &lt;- (9*TC+160)/5: Aqui, estamos calculando a temperatura em
+graus Fahrenheit a partir da temperatura em Celsius. Utilizamos a
+fórmula de conversão: <span class="math display">\[ TF = \frac{9 \cdot
+TC + 160}{5} \]</span> O resultado é armazenado na variável TF.</li>
+<li>cat(“O título do livro é”, round(TF, 0), “.”): Por fim, exibimos o
+resultado calculado. A frase “O título do livro é” é seguida pelo valor
+da temperatura em Fahrenheit, arredondado conforme necessário. Neste
+caso, o resultado seria algo como “O título do livro é 451.4.”
+(dependendo do arredondamento).</li>
+</ol>
+<p>A expressão round(TF, 0) arredonda o valor de TF para o inteiro mais
+próximo. Isso é útil quando queremos exibir números inteiros em vez de
+valores com casas decimais.</p>
 <p><strong>Veja também:</strong></p>
 <ul>
 <li>A verdadeira história da <strong>Escala Celcius</strong>:</li>
@@ -471,6 +489,7 @@ cat(&quot;O título do livro é Fahrenheit&quot;,round(TF, 0),&quot;.&quot;)</co
 </ul>
 <iframe width="320" height="315" src="https://www.youtube.com/embed/LgrXd0NM2y8?si=HMooYlT_Z8cs4-wa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
 </iframe>
+<hr />
 </div>
 <div
 id="explorando-dados-de-um-arquivo-csv-com-r-aplicações-no-ensino-de-física"

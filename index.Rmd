@@ -90,7 +90,6 @@ Vou analisar o código linha por linha:
 onde (h) é a altura e (a) é a aceleração da gravidade.
 
 5. cat("O martelo levaria aproximadamente", round(t, 2), "segundos para alcançar o solo na Lua."): 
-
 Por fim, exibimos o resultado calculado. O tempo é arredondado para duas casas decimais e apresentado em segundos. Neste caso, o martelo levaria aproximadamente X segundos para alcançar o solo na Lua.
 
 Veja o vídeo deste momento histórico: 
@@ -123,6 +122,15 @@ A saída para este programa é:
 
 **O título do livro é Fahrenheit 451 .**
 
+Vou analisar o código linha por linha:
+
+1. TC <- 233: Nesta linha, estamos atribuindo um valor à variável TC, que representa a temperatura em graus Celsius. No exemplo, o valor é 233.
+2. TF <- (9*TC+160)/5: Aqui, estamos calculando a temperatura em graus Fahrenheit a partir da temperatura em Celsius. Utilizamos a fórmula de conversão: $$ TF = \frac{9 \cdot TC + 160}{5} $$
+ O resultado é armazenado na variável TF.
+3. cat("O título do livro é", round(TF, 0), "."): Por fim, exibimos o resultado calculado. A frase “O título do livro é” é seguida pelo valor da temperatura em Fahrenheit, arredondado conforme necessário. Neste caso, o resultado seria algo como “O título do livro é 451.4.” (dependendo do arredondamento).
+
+A expressão round(TF, 0) arredonda o valor de TF para o inteiro mais próximo. Isso é útil quando queremos exibir números inteiros em vez de valores com casas decimais.
+
 **Veja também:**
 
 * A verdadeira história da **Escala Celcius**: 
@@ -132,6 +140,8 @@ A saída para este programa é:
 * A verdadeira história da **Escala Fahrenheit**: 
 
 <iframe width="320" height="315" src="https://www.youtube.com/embed/LgrXd0NM2y8?si=HMooYlT_Z8cs4-wa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+---
 
 ## Explorando dados de um arquivo CSV com R: Aplicações no Ensino de Física
 
