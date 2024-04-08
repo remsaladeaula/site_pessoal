@@ -410,6 +410,30 @@ cat(&quot;O martelo levaria aproximadamente&quot;, round(t, 2), &quot;segundos p
 <p>A saída para este programa é:</p>
 <p><strong>O martelo levaria aproximadamente 1.41 segundos para alcançar
 o solo na Lua.</strong></p>
+<p>Vou analisar o código linha por linha:</p>
+<ol style="list-style-type: decimal">
+<li><p>v0 &lt;- 0: Aqui, estamos definindo a velocidade inicial do
+objeto. No caso, o objeto parte do repouso, então a velocidade inicial é
+zero.</p></li>
+<li><p>h &lt;- 1.6: Essa linha define a altura de queda do objeto. A
+altura é especificada em metros e, no exemplo, é igual a 1,6
+metros.</p></li>
+<li><p>a &lt;- 1.6: Nesta linha, estamos atribuindo o valor da
+aceleração da gravidade na Lua. A aceleração da gravidade na Lua é
+aproximadamente 1,6 m/s<sup>2</sup>.</p></li>
+<li><p>t &lt;- sqrt(2 * h / a): Aqui, calculamos o tempo que o objeto
+levaria para cair da altura especificada. Utilizamos a fórmula da queda
+livre: <span class="math display">\[ t = \sqrt{\frac{2h}{a}}
+\]</span></p></li>
+</ol>
+<p>onde (h) é a altura e (a) é a aceleração da gravidade.</p>
+<ol start="5" style="list-style-type: decimal">
+<li>cat(“O martelo levaria aproximadamente”, round(t, 2), “segundos para
+alcançar o solo na Lua.”):</li>
+</ol>
+<p>Por fim, exibimos o resultado calculado. O tempo é arredondado para
+duas casas decimais e apresentado em segundos. Neste caso, o martelo
+levaria aproximadamente X segundos para alcançar o solo na Lua.</p>
 <p>Veja o vídeo deste momento histórico:</p>
 <iframe width="320" height="315" src="https://www.youtube.com/embed/_Zo9jIzAssA?si=EBQuNOEgGQ1Bdzpi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
 </iframe>
@@ -447,6 +471,219 @@ cat(&quot;O título do livro é Fahrenheit&quot;,round(TF, 0),&quot;.&quot;)</co
 </ul>
 <iframe width="320" height="315" src="https://www.youtube.com/embed/LgrXd0NM2y8?si=HMooYlT_Z8cs4-wa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
 </iframe>
+</div>
+<div
+id="explorando-dados-de-um-arquivo-csv-com-r-aplicações-no-ensino-de-física"
+class="section level2">
+<h2>Explorando dados de um arquivo CSV com R: Aplicações no Ensino de
+Física</h2>
+<p><strong>O surgimento da videoanálise</strong></p>
+<p>A videoanálise não é uma técnica nova. Ela foi utilizada pela
+primeira vez em 1878 pelo fotógrafo inglês Eadweard Muybridge que queria
+tirar uma dúvida que pairava na época sobre o galope de um cavalo. Havia
+dúvidas sobre se os cavalos levantavam todas as patas ao mesmo tempo
+durante um galope. No experimento realizado por este fotógrafo, foram
+utilizadas várias câmeras, obtendo- se 24 fotografias, em rápida
+sucessão e em diferentes momentos durante o movimento do cavalo. Entre
+as fotos, ele conseguiu capturar uma fotografia e comprovar que o cavalo
+tirava as quatro patas do chão, como mostra a imagem abaixo.</p>
+<p><img
+src="https://theautry.org/sites/default/files/blog/1280px-a_horse_trotting._photogravure_after_eadweard_muybridge_1878_wellcome_v0048736_0.jpg"
+style="height:5cm" /></p>
+<p>Hoje, com apenas uma câmera embutida nos smartphones e um aplicativo
+apropriado é possível que os usuários capturem um vídeo e os analisem
+quadro a quadro obtendo assim dados sobre a velocidade e a posição de um
+objeto em movimento.</p>
+<p>Suponha que foi dada a você a tarefa de analisar o movimento de uma
+bola de tênis, arremessada obliquamente no ar, e de entregar um
+relatório sobre o estudo desse movimento. Seria interessante que em seu
+relatório constasse não apenas a revisão teórica, mas também tabelas e
+gráficos obtidos a partir da análise do movimento real desse objeto.Para
+obter dados reais, você precisa inicialmente filmar o movimento do
+objeto e posteriormente analisar o vídeo com um software ou aplicativo
+de rastreamento. Existem vários deles para os mais diversos sistemas,
+aqui vamos listar três bastante úteis.O primeiro é o aplicativo
+VidAnalysis para dispositivo Android, o segundo é o aplicativo Vernier
+Video Physics, para iPhone e iPad e o terceiro é o software Tracker5,
+que está disponível para Windows, Mac e Linux. Esses aplicativos e
+software geram, automaticamente, gráficos, tabelas e um arquivo CSV6,
+após o processo de análise do vídeo. Para uma introdução rápida à
+videoanálise, veja o Apêndice B do livro <a
+href="https://www.seduc.ce.gov.br/wp-content/uploads/sites/37/2023/09/Ebook-02-Julia-com-Fisica.pdf">Júlia
+com Física: uma introdução</a>. Caso queira personalizar seus gráficos,
+você deve enviar o arquivo CSV para o seu e-mail e, posteriormente,
+baixar no computador. Em seguida, basta fazer o upload para o RStudio.
+Nesse post veremos como isso acontece na prática.</p>
+<p>O vídeo que utilizamos para este post está logo abaixo e caso queira
+você pode fazer o download dele clicando <a
+href="https://drive.google.com/file/d/1kxjTyn72cytzwifciPBixzDGyW8O3FCd/view?usp=drivesdk">aqui</a>.</p>
+<iframe width="320" height="315" src="https://www.youtube.com/embed/2Ct1vzYjQj8?si=F1Np-ueixQMyuH78" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+</iframe>
+<p>A partir desse momento estou considerando que você fez a leitura do
+apêndice B do livro Julia com Física: uma introdução, como citado acima.
+Porém, a leitura não é obrigatória. Caso você queira pular a etapa de
+videoanálise, estou disponibilizando <a
+href="https://docs.google.com/spreadsheets/d/1TXR4CSPPL3TC3rXUwJy2R-Wl5brI3vJcwaV-ngHVwe8/edit?usp=sharing">aqui</a>
+o arquivo CSV para download.</p>
+<p><img src="tabela.png" style="height:15cm" /></p>
+<p>Com o arquivo CSV em mãos e considerando que o arquivo “bola.csv”
+está no mesmo diretório onde o código que será executado.Podemos abrir o
+Rstudio e digitar o código abaixo.</p>
+<pre><code>getwd()
+
+# Leia o arquivo CSV (supondo que o arquivo &quot;bola.csv&quot; esteja no mesmo diretório)
+dados = read.csv(&quot;bola.csv&quot;)
+dados
+install.packages(&quot;ggplot2&quot;)
+
+# Carregue a biblioteca ggplot2 (se ainda não estiver carregada)
+library(&quot;ggplot2&quot;)
+
+# Ajuste o modelo de regressão polinomial de segunda ordem
+modelo &lt;- lm(y.distance..m. ~ poly(time..s., 2, raw = TRUE), dados)
+
+# Exiba os coeficientes
+summary(modelo)
+
+# Crie um gráfico de dispersão da posição vertical em função do tempo
+ggplot(data = dados, aes(x = time..s., y = y.distance..m.)) +
+  geom_point(size = 2.5, pch = 21, col = &#39;blue4&#39;, fill = &#39;cornflowerblue&#39;) +
+  labs(x = &quot;Tempo (s)&quot;, y = &quot;Posição vertical (m)&quot;, title = &quot;Posição vertical em função do tempo&quot;)+
+  geom_smooth(method = lm, formula = y ~ poly(x, 2, raw = TRUE))+
+  theme_replace()+
+  annotate(&quot;text&quot;, x = .5, y = 2, label = paste(&quot;y =&quot;, round(coef(modelo)[3], 2), &quot;x^2 +&quot;, round(coef(modelo)[2], 2), &quot;x +&quot;, round(coef(modelo)[1], 2)), color = &#39;black&#39;, size = 5) +
+  theme(plot.title = element_text(size = 16), axis.title = element_text(size = 14), axis.text = element_text(size = 12))
+</code></pre>
+<p>Explicação do código passo a passo em colaboração com o
+<strong>copilot</strong>:</p>
+<p>Claro! Vamos explicar o código passo a passo para os alunos do ensino
+médio:</p>
+<ol style="list-style-type: decimal">
+<li><strong><code>getwd()</code></strong>:
+<ul>
+<li>Essa função não é diretamente relevante para o que estamos fazendo,
+mas ela retorna o diretório de trabalho atual do R. É como dizer “onde
+estou guardando meus arquivos”.</li>
+<li>No nosso caso, estamos supondo que o arquivo “bola.csv” está no
+mesmo diretório onde o código está sendo executado.</li>
+</ul></li>
+<li><strong>Leitura do arquivo CSV</strong>:
+<ul>
+<li>A linha <code>dados = read.csv("bola.csv")</code> lê os dados de um
+arquivo chamado “bola.csv”.</li>
+<li>O arquivo CSV contém informações sobre uma bola (talvez lançada ou
+em movimento).</li>
+</ul></li>
+<li><strong>Instalação da biblioteca ggplot2</strong>:
+<ul>
+<li>A linha <code>install.packages("ggplot2")</code> tenta instalar uma
+biblioteca chamada “ggplot2”. Essa biblioteca é usada para criar
+gráficos legais.</li>
+</ul></li>
+<li><strong>Carregamento da biblioteca ggplot2</strong>:
+<ul>
+<li>A linha <code>library("ggplot2")</code> carrega a biblioteca
+“ggplot2” para que possamos usar suas funções.</li>
+<li>Se a biblioteca já estiver instalada, ela será carregada.</li>
+</ul></li>
+<li><strong>Ajuste do modelo de regressão polinomial de segunda
+ordem</strong>:
+<ul>
+<li>O código cria um modelo matemático para entender como a posição
+vertical de uma bola muda com o tempo.</li>
+<li>O modelo é ajustado usando a função <code>lm()</code>.</li>
+<li>Ele usa uma fórmula especial chamada “polinômio de segunda ordem”
+para prever a posição da bola com base no tempo.</li>
+</ul></li>
+<li><strong>Exibição dos coeficientes do modelo</strong>:
+<ul>
+<li>A linha <code>summary(modelo)</code> mostra os números mágicos que
+ajudam a prever a posição da bola.</li>
+<li>Esses números são como as instruções secretas para a bola se mover
+corretamente.</li>
+</ul></li>
+<li><strong>Criação do gráfico de dispersão</strong>:
+<ul>
+<li>O código cria um gráfico que mostra como a posição vertical da bola
+muda à medida que o tempo passa.</li>
+<li>Os pontos no gráfico representam a posição da bola em diferentes
+momentos.</li>
+<li>A linha suave no gráfico nos ajuda a ver a tendência geral.</li>
+<li>O título e os rótulos dos eixos são personalizados para que possamos
+entender o que o gráfico está mostrando.</li>
+</ul></li>
+</ol>
+<p>Em resumo, esse código é como uma receita para entender o movimento
+de uma bola. Ele usa matemática e gráficos para nos ajudar a descobrir
+como a bola se comporta.</p>
+<p>Veja a saída do código abaixo:</p>
+<p><img src="grafico.png" style="height:10cm" /></p>
+<p><strong>EXTRA!</strong></p>
+<p>Para obter os coeficientes separadamente, você pode digitar os
+comandos abaixo:</p>
+<pre><code># Coeficientes
+coeficientes &lt;- coef(modelo)
+intercepto &lt;- coeficientes[1]
+coef_linear &lt;- coeficientes[2]
+coef_quadratico &lt;- coeficientes[3]
+
+print(&quot;Intercepto:&quot;)
+print(intercepto)
+
+print(&quot;Coeficiente Linear:&quot;)
+print(coef_linear)
+
+print(&quot;Coeficiente Quadrático:&quot;)
+print(coef_quadratico)
+</code></pre>
+<p>Saída do programa:</p>
+<pre><code>&gt; coeficientes &lt;- coef(modelo)
+&gt; intercepto &lt;- coeficientes[1]
+&gt; coef_linear &lt;- coeficientes[2]
+&gt; coef_quadratico &lt;- coeficientes[3]
+&gt; &gt; print(&quot;Intercepto:&quot;)
+[1] &quot;Intercepto:&quot;
+&gt; print(intercepto)
+(Intercept) 
+   0.144379 
+&gt; &gt; print(&quot;Coeficiente Linear:&quot;)
+[1] &quot;Coeficiente Linear:&quot;
+&gt; print(coef_linear)
+poly(time..s., 2, raw = TRUE)1 
+                      3.287956 
+&gt; &gt; print(&quot;Coeficiente Quadrático:&quot;)
+[1] &quot;Coeficiente Quadrático:&quot;
+&gt; print(coef_quadratico)
+poly(time..s., 2, raw = TRUE)2 
+                      -5.21257 
+                      </code></pre>
+<p>Como interpretar esses resultados? Vejamos:</p>
+<ol style="list-style-type: decimal">
+<li><strong>Intercepto</strong>:
+<ul>
+<li>O valor do intercepto é <strong>0.144379</strong>.</li>
+<li>No contexto do seu modelo, o intercepto representa o valor previsto
+da variável de resposta quando todas as outras variáveis independentes
+são iguais a zero. Em outras palavras, é o valor esperado quando o tempo
+(ou outra variável) é zero.</li>
+</ul></li>
+<li><strong>Coeficiente Linear</strong>:
+<ul>
+<li>O coeficiente linear é <strong>3.287956</strong>.</li>
+<li>Esse coeficiente está associado à variável de tempo (ou outra
+variável independente). Ele indica como a variável de resposta muda
+linearmente em relação à variável de tempo. Um valor positivo significa
+que a variável de resposta aumenta à medida que o tempo aumenta, e um
+valor negativo indica uma diminuição.</li>
+</ul></li>
+<li><strong>Coeficiente Quadrático</strong>:
+<ul>
+<li>O coeficiente quadrático é <strong>-5.21257</strong>.</li>
+<li>Esse coeficiente está relacionado à variação não linear da variável
+de resposta em relação à variável de tempo. Pode representar uma
+curvatura na relação entre as variáveis.</li>
+</ul></li>
+</ol>
 <hr />
 </div>
 

@@ -77,6 +77,22 @@ A saída para este programa é:
 
 **O martelo levaria aproximadamente 1.41 segundos para alcançar o solo na Lua.**
 
+Vou analisar o código linha por linha:
+
+1. v0 <- 0: Aqui, estamos definindo a velocidade inicial do objeto. No caso, o objeto parte do repouso, então a velocidade inicial é zero.
+
+2. h <- 1.6: Essa linha define a altura de queda do objeto. A altura é especificada em metros e, no exemplo, é igual a 1,6 metros.
+
+3. a <- 1.6: Nesta linha, estamos atribuindo o valor da aceleração da gravidade na Lua. A aceleração da gravidade na Lua é aproximadamente 1,6 m/s^2^.
+
+4. t <- sqrt(2 * h / a): Aqui, calculamos o tempo que o objeto levaria para cair da altura especificada. Utilizamos a fórmula da queda livre: $$ t = \sqrt{\frac{2h}{a}} $$
+
+onde (h) é a altura e (a) é a aceleração da gravidade.
+
+5. cat("O martelo levaria aproximadamente", round(t, 2), "segundos para alcançar o solo na Lua."): 
+
+Por fim, exibimos o resultado calculado. O tempo é arredondado para duas casas decimais e apresentado em segundos. Neste caso, o martelo levaria aproximadamente X segundos para alcançar o solo na Lua.
+
 Veja o vídeo deste momento histórico: 
 
 <iframe width="320" height="315" src="https://www.youtube.com/embed/_Zo9jIzAssA?si=EBQuNOEgGQ1Bdzpi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -116,6 +132,163 @@ A saída para este programa é:
 * A verdadeira história da **Escala Fahrenheit**: 
 
 <iframe width="320" height="315" src="https://www.youtube.com/embed/LgrXd0NM2y8?si=HMooYlT_Z8cs4-wa" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+## Explorando dados de um arquivo CSV com R: Aplicações no Ensino de Física
+
+**O surgimento da videoanálise**
+
+A videoanálise não é uma técnica nova. Ela foi utilizada pela primeira vez em 1878 pelo 
+fotógrafo inglês Eadweard Muybridge que queria tirar uma dúvida que pairava na época sobre 
+o galope de um cavalo. Havia dúvidas sobre se os cavalos levantavam todas as patas ao mesmo 
+tempo durante um galope. 
+No experimento realizado por este fotógrafo, foram utilizadas várias câmeras, obtendo-
+se 24 fotografias, em rápida sucessão e em diferentes momentos durante o movimento do 
+cavalo. Entre as fotos, ele conseguiu capturar uma fotografia e comprovar que o cavalo tirava 
+as quatro patas do chão, como mostra a imagem abaixo.
+
+![](https://theautry.org/sites/default/files/blog/1280px-a_horse_trotting._photogravure_after_eadweard_muybridge_1878_wellcome_v0048736_0.jpg){width=10cm, height=5cm}
+
+Hoje, com apenas uma câmera embutida nos smartphones e um aplicativo apropriado é 
+possível que os usuários capturem um vídeo e os analisem quadro a quadro obtendo assim dados 
+sobre a velocidade e a posição de um objeto em movimento.
+
+Suponha que foi dada a você a tarefa de analisar o movimento de uma bola de tênis, arremessada obliquamente no ar, e de entregar um relatório sobre o estudo desse movimento. Seria interessante que em seu relatório constasse não apenas a revisão teórica, mas também tabelas e gráficos obtidos a partir da análise do movimento real desse objeto.Para obter dados reais, você precisa inicialmente filmar o movimento do objeto e posteriormente analisar o vídeo com um software ou aplicativo de rastreamento. Existem vários deles para os mais diversos sistemas, aqui vamos listar três bastante úteis.O primeiro é o aplicativo VidAnalysis para dispositivo Android, o segundo é o aplicativo Vernier Video Physics, para iPhone e iPad e o terceiro é o software Tracker5, que está disponível para Windows, Mac e Linux. Esses aplicativos e software geram, automaticamente, gráficos, tabelas e um arquivo CSV6, após o processo de análise do vídeo. Para uma introdução rápida à videoanálise, veja o Apêndice B do livro [Júlia com Física: uma introdução](https://www.seduc.ce.gov.br/wp-content/uploads/sites/37/2023/09/Ebook-02-Julia-com-Fisica.pdf). Caso queira personalizar seus gráficos, você deve enviar o arquivo CSV para o seu e-mail e, posteriormente, baixar no computador. Em seguida, basta fazer o upload para o RStudio. Nesse post veremos como isso acontece na  prática.
+
+O vídeo que utilizamos para este post está logo abaixo e caso queira você pode fazer o download dele clicando [aqui](https://drive.google.com/file/d/1kxjTyn72cytzwifciPBixzDGyW8O3FCd/view?usp=drivesdk).
+
+<iframe width="320" height="315" src="https://www.youtube.com/embed/2Ct1vzYjQj8?si=F1Np-ueixQMyuH78" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+A partir desse momento estou considerando que você fez a leitura do apêndice B do livro Julia com Física: uma introdução, como citado acima. Porém, a leitura não é obrigatória. Caso você queira pular a etapa de videoanálise, estou disponibilizando [aqui](https://docs.google.com/spreadsheets/d/1TXR4CSPPL3TC3rXUwJy2R-Wl5brI3vJcwaV-ngHVwe8/edit?usp=sharing) o arquivo CSV para download.
+
+![](tabela.png){width=30cm, height=15cm}
+
+Com o arquivo CSV em mãos e considerando que o arquivo "bola.csv" está no mesmo diretório onde o código que será executado.Podemos abrir o Rstudio e digitar o código abaixo.
+
+
+```
+getwd()
+
+# Leia o arquivo CSV (supondo que o arquivo "bola.csv" esteja no mesmo diretório)
+dados = read.csv("bola.csv")
+dados
+install.packages("ggplot2")
+
+# Carregue a biblioteca ggplot2 (se ainda não estiver carregada)
+library("ggplot2")
+
+# Ajuste o modelo de regressão polinomial de segunda ordem
+modelo <- lm(y.distance..m. ~ poly(time..s., 2, raw = TRUE), dados)
+
+# Exiba os coeficientes
+summary(modelo)
+
+# Crie um gráfico de dispersão da posição vertical em função do tempo
+ggplot(data = dados, aes(x = time..s., y = y.distance..m.)) +
+  geom_point(size = 2.5, pch = 21, col = 'blue4', fill = 'cornflowerblue') +
+  labs(x = "Tempo (s)", y = "Posição vertical (m)", title = "Posição vertical em função do tempo")+
+  geom_smooth(method = lm, formula = y ~ poly(x, 2, raw = TRUE))+
+  theme_replace()+
+  annotate("text", x = .5, y = 2, label = paste("y =", round(coef(modelo)[3], 2), "x^2 +", round(coef(modelo)[2], 2), "x +", round(coef(modelo)[1], 2)), color = 'black', size = 5) +
+  theme(plot.title = element_text(size = 16), axis.title = element_text(size = 14), axis.text = element_text(size = 12))
+
+```
+Explicação do código passo a passo em colaboração com o **copilot**:
+
+Claro! Vamos explicar o código passo a passo para os alunos do ensino médio:
+
+1. **`getwd()`**:
+    - Essa função não é diretamente relevante para o que estamos fazendo, mas ela retorna o diretório de trabalho atual do R. É como dizer "onde estou guardando meus arquivos".
+    - No nosso caso, estamos supondo que o arquivo "bola.csv" está no mesmo diretório onde o código está sendo executado.
+
+2. **Leitura do arquivo CSV**:
+    - A linha `dados = read.csv("bola.csv")` lê os dados de um arquivo chamado "bola.csv".
+    - O arquivo CSV contém informações sobre uma bola (talvez lançada ou em movimento).
+
+3. **Instalação da biblioteca ggplot2**:
+    - A linha `install.packages("ggplot2")` tenta instalar uma biblioteca chamada "ggplot2". Essa biblioteca é usada para criar gráficos legais.
+
+4. **Carregamento da biblioteca ggplot2**:
+    - A linha `library("ggplot2")` carrega a biblioteca "ggplot2" para que possamos usar suas funções.
+    - Se a biblioteca já estiver instalada, ela será carregada.
+
+5. **Ajuste do modelo de regressão polinomial de segunda ordem**:
+    - O código cria um modelo matemático para entender como a posição vertical de uma bola muda com o tempo.
+    - O modelo é ajustado usando a função `lm()`.
+    - Ele usa uma fórmula especial chamada "polinômio de segunda ordem" para prever a posição da bola com base no tempo.
+
+6. **Exibição dos coeficientes do modelo**:
+    - A linha `summary(modelo)` mostra os números mágicos que ajudam a prever a posição da bola.
+    - Esses números são como as instruções secretas para a bola se mover corretamente.
+
+7. **Criação do gráfico de dispersão**:
+    - O código cria um gráfico que mostra como a posição vertical da bola muda à medida que o tempo passa.
+    - Os pontos no gráfico representam a posição da bola em diferentes momentos.
+    - A linha suave no gráfico nos ajuda a ver a tendência geral.
+    - O título e os rótulos dos eixos são personalizados para que possamos entender o que o gráfico está mostrando.
+
+Em resumo, esse código é como uma receita para entender o movimento de uma bola. Ele usa matemática e gráficos para nos ajudar a descobrir como a bola se comporta.
+
+Veja a saída do código abaixo:
+
+![](grafico.png){width=20cm, height=10cm}
+
+
+**EXTRA!**
+
+Para obter os coeficientes separadamente, você pode digitar os comandos abaixo:
+```
+# Coeficientes
+coeficientes <- coef(modelo)
+intercepto <- coeficientes[1]
+coef_linear <- coeficientes[2]
+coef_quadratico <- coeficientes[3]
+
+print("Intercepto:")
+print(intercepto)
+
+print("Coeficiente Linear:")
+print(coef_linear)
+
+print("Coeficiente Quadrático:")
+print(coef_quadratico)
+
+```
+Saída do programa: 
+```
+> coeficientes <- coef(modelo)
+> intercepto <- coeficientes[1]
+> coef_linear <- coeficientes[2]
+> coef_quadratico <- coeficientes[3]
+> > print("Intercepto:")
+[1] "Intercepto:"
+> print(intercepto)
+(Intercept) 
+   0.144379 
+> > print("Coeficiente Linear:")
+[1] "Coeficiente Linear:"
+> print(coef_linear)
+poly(time..s., 2, raw = TRUE)1 
+                      3.287956 
+> > print("Coeficiente Quadrático:")
+[1] "Coeficiente Quadrático:"
+> print(coef_quadratico)
+poly(time..s., 2, raw = TRUE)2 
+                      -5.21257 
+                      
+```
+ Como interpretar esses resultados? Vejamos: 
+
+1. **Intercepto**:
+    - O valor do intercepto é **0.144379**.
+    - No contexto do seu modelo, o intercepto representa o valor previsto da variável de resposta quando todas as outras variáveis independentes são iguais a zero. Em outras palavras, é o valor esperado quando o tempo (ou outra variável) é zero.
+
+2. **Coeficiente Linear**:
+    - O coeficiente linear é **3.287956**.
+    - Esse coeficiente está associado à variável de tempo (ou outra variável independente). Ele indica como a variável de resposta muda linearmente em relação à variável de tempo. Um valor positivo significa que a variável de resposta aumenta à medida que o tempo aumenta, e um valor negativo indica uma diminuição.
+
+3. **Coeficiente Quadrático**:
+    - O coeficiente quadrático é **-5.21257**.
+    - Esse coeficiente está relacionado à variação não linear da variável de resposta em relação à variável de tempo. Pode representar uma curvatura na relação entre as variáveis.
 
 ---
 
