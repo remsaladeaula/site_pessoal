@@ -22,7 +22,7 @@ Neste blog pretendo dar *insights* para que professores possam utilizar a lingua
 
 ## Uso remoto do R
 
-Para criar este blog estou utilizando o R instalado na minha máquina. Porém, caso você não queira instalá-lo na sua ou esteja utilizando um computador público: laboratório de informática, casa de amigos, etc. aconselho a usar o [RStudio Cloud](https://posit.cloud/). Nele Você pode fazer o login com sua conta do Gmail ou do Github e acessar o R na nuvem.
+Para criar este blog estou utilizando o R instalado na minha máquina. Porém, caso você não queira instalá-lo na sua ou esteja utilizando um computador público: laboratório de informática, casa de amigos, etc. aconselho a usar o [RStudio Cloud](https://posit.cloud/). Tudo o que você fizer ficará armazenado na nuvem. No RStudio Cloud Você pode fazer o login com sua conta do Gmail ou do Github e acessar o R na nuvem.
 
 ---
 
@@ -51,11 +51,21 @@ log2(8) #log na base 2
 ## [1] 3
 
 ```
+Há duas opções para ver a saída do programa acima:
+
+1. a cada operação digitada você pode apertar CRTL+ENTER ou simplesmente clicar em RUN como mostra a imagem abaixo para ver a saída do programa;
+
+2. Você também tem a opção de digitar todas essas operações, em seguida selecionar tudo e rodar o programa (apertar CRTL+ENTER ou simplesmente clicar em RUN) para ver a saída.
+
+![](tela.png){width=30cm, height=15cm}
+
+Neste Post usamos o RStudio Cloud. Faça o teste!
+
 ---
 
 ## Resolvendo problemas de física básica
 
-**Enunciado 1**
+### Enunciado 1 - Problema de queda livre 
 
 Em 1971, o astronauta americano David Scott realizou, na superfície da Lua, o experimento de queda livre dos corpos no vácuo, anteriormente proposto por Galileu. Deixou cair ali uma pena e um martelo, simultaneamente, a partir da mesma posição. Supondo que ambos os objetos tenham sido soltos de uma altura de 1,6 m em relação à superfície, depois de quanto tempo o martelo alcançaria o solo? Dado: aceleração da gravidade na Lua $\simeq$ 1,6m/s^2^.
 
@@ -77,11 +87,11 @@ A saída para este programa é:
 
 **O martelo levaria aproximadamente 1.41 segundos para alcançar o solo na Lua.**
 
-Vou analisar o código linha por linha:
+Vou analisar o código linha a linha:
 
 1. v0 <- 0: Aqui, estamos definindo a velocidade inicial do objeto. No caso, o objeto parte do repouso, então a velocidade inicial é zero.
 
-**obs.:** *O símbolo “<-” em R é chamado de operador de atribuição. Ele é usado para atribuir valores a variáveis. Além do operador “<-”, você também pode usar o sinal de igual “=” para atribuição.No entanto, a preferência na comunidade de programação R é usar a seta “<-” para evitar confusões com outros contextos onde o sinal de igual é usado (como comparações).*
+**obs.:** *O símbolo `<-` em R é chamado de operador de atribuição. Ele é usado para atribuir valores a variáveis. Além do operador `<-`, você também pode usar o sinal de igual `=` para atribuição. Ambos fazem a mesma coisa, mas o <- é mais comum na comunidade R.*
 
 2. h <- 1.6: Essa linha define a altura de queda do objeto. A altura é especificada em metros e, no exemplo, é igual a 1,6 metros.
 
@@ -99,7 +109,7 @@ Veja o vídeo deste momento histórico:
 
 <iframe width="320" height="315" src="https://www.youtube.com/embed/_Zo9jIzAssA?si=EBQuNOEgGQ1Bdzpi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-**Enunciado 2**
+### Enunciado 2 - Problema de conversão de temperatura
 
 Sabe-se que a temperatura na qual o papel entra em combustão é de 233^0^C. O título de um famoso livro de ficção científica é o valor aproximado desta temperatura na escala Fahrenheit. Qual é o título deste livro?
 
@@ -161,7 +171,7 @@ se 24 fotografias, em rápida sucessão e em diferentes momentos durante o movim
 cavalo. Entre as fotos, ele conseguiu capturar uma fotografia e comprovar que o cavalo tirava 
 as quatro patas do chão, como mostra a imagem abaixo.
 
-![](https://theautry.org/sites/default/files/blog/1280px-a_horse_trotting._photogravure_after_eadweard_muybridge_1878_wellcome_v0048736_0.jpg){width=10cm, height=5cm}
+![](https://theautry.org/sites/default/files/blog/1280px-a_horse_trotting._photogravure_after_eadweard_muybridge_1878_wellcome_v0048736_0.jpg){width=20cm, height=10cm}
 
 Hoje, com apenas uma câmera embutida nos smartphones e um aplicativo apropriado é 
 possível que os usuários capturem um vídeo e os analisem quadro a quadro obtendo assim dados 
@@ -211,7 +221,7 @@ ggplot(data = dados, aes(x = time..s., y = y.distance..m.)) +
   theme(plot.title = element_text(size = 16), axis.title = element_text(size = 14), axis.text = element_text(size = 12))
 
 ```
-Explicação do código passo a passo em colaboração com o **copilot**:
+Vou explicar o código passo a passo:
 
 Claro! Vamos explicar o código passo a passo para os alunos do ensino médio:
 

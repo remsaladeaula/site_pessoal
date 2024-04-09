@@ -356,8 +356,9 @@ utilizar a linguagem R em sala de aula.</p>
 Porém, caso você não queira instalá-lo na sua ou esteja utilizando um
 computador público: laboratório de informática, casa de amigos, etc.
 aconselho a usar o <a href="https://posit.cloud/">RStudio Cloud</a>.
-Nele Você pode fazer o login com sua conta do Gmail ou do Github e
-acessar o R na nuvem.</p>
+Tudo o que você fizer ficará armazenado na nuvem. No RStudio Cloud Você
+pode fazer o login com sua conta do Gmail ou do Github e acessar o R na
+nuvem.</p>
 <hr />
 </div>
 <div id="r-como-calculadora" class="section level2">
@@ -383,11 +384,23 @@ sqrt(81) #raiz
 log2(8) #log na base 2
 ## [1] 3
 </code></pre>
+<p>Há duas opções para ver a saída do programa acima:</p>
+<ol style="list-style-type: decimal">
+<li><p>a cada operação digitada você pode apertar CRTL+ENTER ou
+simplesmente clicar em RUN como mostra a imagem abaixo para ver a saída
+do programa;</p></li>
+<li><p>Você também tem a opção de digitar todas essas operações, em
+seguida selecionar tudo e rodar o programa (apertar CRTL+ENTER ou
+simplesmente clicar em RUN) para ver a saída.</p></li>
+</ol>
+<p><img src="tela.png" style="height:15cm" /></p>
+<p>Neste Post usamos o RStudio Cloud. Faça o teste!</p>
 <hr />
 </div>
 <div id="resolvendo-problemas-de-física-básica" class="section level2">
 <h2>Resolvendo problemas de física básica</h2>
-<p><strong>Enunciado 1</strong></p>
+<div id="enunciado-1---problema-de-queda-livre" class="section level3">
+<h3>Enunciado 1 - Problema de queda livre</h3>
 <p>Em 1971, o astronauta americano David Scott realizou, na superfície
 da Lua, o experimento de queda livre dos corpos no vácuo, anteriormente
 proposto por Galileu. Deixou cair ali uma pena e um martelo,
@@ -410,18 +423,17 @@ cat(&quot;O martelo levaria aproximadamente&quot;, round(t, 2), &quot;segundos p
 <p>A saída para este programa é:</p>
 <p><strong>O martelo levaria aproximadamente 1.41 segundos para alcançar
 o solo na Lua.</strong></p>
-<p>Vou analisar o código linha por linha:</p>
+<p>Vou analisar o código linha a linha:</p>
 <ol style="list-style-type: decimal">
 <li>v0 &lt;- 0: Aqui, estamos definindo a velocidade inicial do objeto.
 No caso, o objeto parte do repouso, então a velocidade inicial é
 zero.</li>
 </ol>
-<p><strong>obs.:</strong> <em>O símbolo “&lt;-” em R é chamado de
-operador de atribuição. Ele é usado para atribuir valores a variáveis.
-Além do operador “&lt;-”, você também pode usar o sinal de igual “=”
-para atribuição.No entanto, a preferência na comunidade de programação R
-é usar a seta “&lt;-” para evitar confusões com outros contextos onde o
-sinal de igual é usado (como comparações).</em></p>
+<p><strong>obs.:</strong> <em>O símbolo <code>&lt;-</code> em R é
+chamado de operador de atribuição. Ele é usado para atribuir valores a
+variáveis. Além do operador <code>&lt;-</code>, você também pode usar o
+sinal de igual <code>=</code> para atribuição. Ambos fazem a mesma
+coisa, mas o &lt;- é mais comum na comunidade R.</em></p>
 <ol start="2" style="list-style-type: decimal">
 <li><p>h &lt;- 1.6: Essa linha define a altura de queda do objeto. A
 altura é especificada em metros e, no exemplo, é igual a 1,6
@@ -446,7 +458,10 @@ e apresentado em segundos. Neste caso, o martelo levaria aproximadamente
 <p>Veja o vídeo deste momento histórico:</p>
 <iframe width="320" height="315" src="https://www.youtube.com/embed/_Zo9jIzAssA?si=EBQuNOEgGQ1Bdzpi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
 </iframe>
-<p><strong>Enunciado 2</strong></p>
+</div>
+<div id="enunciado-2---problema-de-conversão-de-temperatura"
+class="section level3">
+<h3>Enunciado 2 - Problema de conversão de temperatura</h3>
 <p>Sabe-se que a temperatura na qual o papel entra em combustão é de
 233<sup>0</sup>C. O título de um famoso livro de ficção científica é o
 valor aproximado desta temperatura na escala Fahrenheit. Qual é o título
@@ -500,6 +515,7 @@ valores com casas decimais.</p>
 </iframe>
 <hr />
 </div>
+</div>
 <div
 id="explorando-dados-de-um-arquivo-csv-com-r-aplicações-no-ensino-de-física"
 class="section level2">
@@ -519,7 +535,7 @@ as fotos, ele conseguiu capturar uma fotografia e comprovar que o cavalo
 tirava as quatro patas do chão, como mostra a imagem abaixo.</p>
 <p><img
 src="https://theautry.org/sites/default/files/blog/1280px-a_horse_trotting._photogravure_after_eadweard_muybridge_1878_wellcome_v0048736_0.jpg"
-style="height:5cm" /></p>
+style="height:10cm" /></p>
 <p>Hoje, com apenas uma câmera embutida nos smartphones e um aplicativo
 apropriado é possível que os usuários capturem um vídeo e os analisem
 quadro a quadro obtendo assim dados sobre a velocidade e a posição de um
@@ -590,8 +606,7 @@ ggplot(data = dados, aes(x = time..s., y = y.distance..m.)) +
   annotate(&quot;text&quot;, x = .5, y = 2, label = paste(&quot;y =&quot;, round(coef(modelo)[3], 2), &quot;x^2 +&quot;, round(coef(modelo)[2], 2), &quot;x +&quot;, round(coef(modelo)[1], 2)), color = &#39;black&#39;, size = 5) +
   theme(plot.title = element_text(size = 16), axis.title = element_text(size = 14), axis.text = element_text(size = 12))
 </code></pre>
-<p>Explicação do código passo a passo em colaboração com o
-<strong>copilot</strong>:</p>
+<p>Vou explicar o código passo a passo:</p>
 <p>Claro! Vamos explicar o código passo a passo para os alunos do ensino
 médio:</p>
 <ol style="list-style-type: decimal">
