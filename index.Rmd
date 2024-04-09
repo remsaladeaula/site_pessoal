@@ -57,7 +57,7 @@ Há duas opções para ver a saída do programa acima:
 
 2. Você também tem a opção de digitar todas essas operações, em seguida selecionar tudo e rodar o programa (apertar CRTL+ENTER ou simplesmente clicar em RUN) para ver a saída.
 
-![](tela.png){width=30cm, height=15cm}
+![](tela.png){width=20cm, height=10cm}
 
 Neste Post usamos o RStudio Cloud. Faça o teste!
 
@@ -316,9 +316,6 @@ poly(time..s., 2, raw = TRUE)2
 3. **Coeficiente Quadrático**:
     - O coeficiente quadrático é **-5.21257**.
     - Esse coeficiente está relacionado à variação não linear da variável de resposta em relação à variável de tempo. Pode representar uma curvatura na relação entre as variáveis.
-    
-    ![](bola3.png){width=30cm, height=15cm}
-
 
 ---
 
