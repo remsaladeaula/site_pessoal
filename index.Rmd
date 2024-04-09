@@ -53,7 +53,7 @@ log2(8) #log na base 2
 ```
 Há duas opções para ver a saída do programa acima:
 
-1. a cada operação digitada você pode apertar CRTL+ENTER ou simplesmente clicar em RUN como mostra a imagem abaixo para ver a saída do programa;
+1. A cada operação digitada você pode apertar CRTL+ENTER ou simplesmente clicar em RUN como mostra a imagem abaixo para ver a saída do programa;
 
 2. Você também tem a opção de digitar todas essas operações, em seguida selecionar tudo e rodar o programa (apertar CRTL+ENTER ou simplesmente clicar em RUN) para ver a saída.
 
@@ -140,7 +140,7 @@ Vou analisar o código linha por linha:
 1. TC <- 233: Nesta linha, estamos atribuindo um valor à variável TC, que representa a temperatura em graus Celsius. No exemplo, o valor é 233.
 2. TF <- (9*TC+160)/5: Aqui, estamos calculando a temperatura em graus Fahrenheit a partir da temperatura em Celsius. Utilizamos a fórmula de conversão: $$ TF = \frac{9 \cdot TC + 160}{5} $$
  O resultado é armazenado na variável TF.
-3. cat("O título do livro é", round(TF, 0), "."): Por fim, exibimos o resultado calculado. A frase “O título do livro é” é seguida pelo valor da temperatura em Fahrenheit, arredondado conforme necessário. Neste caso, o resultado seria algo como “O título do livro é Fahrenheit 451.” (dependendo do arredondamento).
+3. cat("O título do livro é", round(TF, 0), "."): Por fim, exibimos o resultado calculado. A frase “O título do livro é” é seguida pelo valor da temperatura em Fahrenheit, arredondado conforme necessário. Neste caso, o resultado seria algo como “O título do livro é Fahrenheit 451.”.
 
 A expressão round(TF, 0) arredonda o valor de TF para o inteiro mais próximo. Isso é útil quando queremos exibir números inteiros em vez de valores com casas decimais.
 
@@ -222,8 +222,6 @@ ggplot(data = dados, aes(x = time..s., y = y.distance..m.)) +
 
 ```
 Vou explicar o código passo a passo:
-
-Claro! Vamos explicar o código passo a passo para os alunos do ensino médio:
 
 1. **`getwd()`**:
     - Essa função não é diretamente relevante para o que estamos fazendo, mas ela retorna o diretório de trabalho atual do R. É como dizer "onde estou guardando meus arquivos".
@@ -318,6 +316,9 @@ poly(time..s., 2, raw = TRUE)2
 3. **Coeficiente Quadrático**:
     - O coeficiente quadrático é **-5.21257**.
     - Esse coeficiente está relacionado à variação não linear da variável de resposta em relação à variável de tempo. Pode representar uma curvatura na relação entre as variáveis.
+    
+    ![](bola3.png){width=30cm, height=15cm}
+
 
 ---
 
