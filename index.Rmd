@@ -91,11 +91,11 @@ Vou analisar o código linha a linha:
 
 1. v0 <- 0: Aqui, estamos definindo a velocidade inicial do objeto. No caso, o objeto parte do repouso, então a velocidade inicial é zero.
 
-**obs.:** *O símbolo `<-` em R é chamado de operador de atribuição. Ele é usado para atribuir valores a variáveis. Além do operador `<-`, você também pode usar o sinal de igual `=` para atribuição. Ambos fazem a mesma coisa, mas o <- é mais comum na comunidade R.*
+**obs.:** *O símbolo `<-`, que é lido como **“flecha para a esquerda”**, em R é chamado de operador de atribuição. Ele é usado para atribuir valores a variáveis. Além do operador `<-`, você também pode usar o sinal de igual `=` para atribuição. Ambos fazem a mesma coisa, mas o <- é mais comum na comunidade R.*
 
-2. h <- 1.6: Essa linha define a altura de queda do objeto. A altura é especificada em metros e, no exemplo, é igual a 1,6 metros.
+2. h <- 1.6: Essa linha define a altura de queda do objeto. No exemplo, essa altura é igual a 1,6 metros.
 
-3. a <- 1.6: Nesta linha, estamos atribuindo o valor da aceleração da gravidade na Lua. A aceleração da gravidade na Lua é aproximadamente 1,6 m/s^2^.
+3. a <- 1.6: Nesta linha, estamos atribuindo o valor da aceleração da gravidade na Lua que é de aproximadamente 1,6 m/s^2^.
 
 4. t <- sqrt(2 * h / a): Aqui, calculamos o tempo que o objeto levaria para cair da altura especificada. Utilizamos a fórmula da queda livre: $$ t = \sqrt{\frac{2h}{a}} $$
 
@@ -103,7 +103,7 @@ onde (h) é a altura e (a) é a aceleração da gravidade.
 
 Por fim, exibimos o resultado calculado com o comando `cat`:
 
-5. cat("O martelo levaria aproximadamente", round(t, 2), "segundos para alcançar o solo na Lua."):O tempo é arredondado para duas casas decimais e apresentado em segundos. Neste caso, o martelo levaria aproximadamente 1,41s segundos para alcançar o solo na Lua.
+5. cat("O martelo levaria aproximadamente", round(t, 2), "segundos para alcançar o solo na Lua."):O tempo é arredondado para duas casas decimais (`round(t, 2)`) e apresentado em segundos. Neste caso, o martelo levaria aproximadamente 1,41s segundos para alcançar o solo na Lua.
 
 Veja o vídeo deste momento histórico: 
 
@@ -135,14 +135,12 @@ A saída para este programa é:
 
 **O título do livro é Fahrenheit 451 .**
 
-Vou analisar o código linha por linha:
+Vou analisar o código linha a linha:
 
 1. TC <- 233: Nesta linha, estamos atribuindo um valor à variável TC, que representa a temperatura em graus Celsius. No exemplo, o valor é 233.
 2. TF <- (9*TC+160)/5: Aqui, estamos calculando a temperatura em graus Fahrenheit a partir da temperatura em Celsius. Utilizamos a fórmula de conversão: $$ TF = \frac{9 \cdot TC + 160}{5} $$
  O resultado é armazenado na variável TF.
-3. cat("O título do livro é", round(TF, 0), "."): Por fim, exibimos o resultado calculado. A frase “O título do livro é” é seguida pelo valor da temperatura em Fahrenheit, arredondado conforme necessário. Neste caso, o resultado seria algo como “O título do livro é Fahrenheit 451.”.
-
-A expressão round(TF, 0) arredonda o valor de TF para o inteiro mais próximo. Isso é útil quando queremos exibir números inteiros em vez de valores com casas decimais.
+3. cat("O título do livro é", round(TF, 0), "."): Por fim, exibimos o resultado calculado. A frase “O título do livro é” é seguida pela expressão `round(TF, 0)` que arredonda o valor de TF para o inteiro mais próximo. Neste caso, o resultado é “O título do livro é Fahrenheit 451.”.
 
 **Veja também:**
 
@@ -316,6 +314,6 @@ poly(time..s., 2, raw = TRUE)2
 3. **Coeficiente Quadrático**:
     - O coeficiente quadrático é **-5.21257**.
     - Esse coeficiente está relacionado à variação não linear da variável de resposta em relação à variável de tempo. Pode representar uma curvatura na relação entre as variáveis.
-
+  
 ---
 
