@@ -1,7 +1,7 @@
 ---
 title: "index.Rmd"
 author: "Professor: Adeil Araújo"
-date: "*Blog construído com R e R Markdown*"
+date: "*Blog construído com R Markdown*"
 output: 
   html_document:
     theme: united
@@ -316,33 +316,130 @@ poly(time..s., 2, raw = TRUE)2
     - Esse coeficiente está relacionado à variação não linear da variável de resposta em relação à variável de tempo. Pode representar uma curvatura na relação entre as variáveis.
   
 ---
-## Modelando a característica de um dipolo
 
-Este *post* é baseado em uma atividade apresentada no livro [*“Physique-Chimie 2de”*]([https://www.calameo.com/books/0005967298a6f595a36e9]) de Lionel Douthe, Baptiste Fray publicado por Lelivrescolaire.fr Éditions. Tanto o texto apresentado sobre como a atividade aparecem no livro nas páginas [314 e 315](https://www.lelivrescolaire.fr/page/6225425). A tradução do texto foi nossa em comlaboração com o ChatGPT.
+## Modelando a característica de um dipolo (Lei de OHM)
+
+Este *post* é baseado em um problema respondido na seção "LABO PYTHON" do livro [*“Physique-Chimie 2de”*]([https://www.calameo.com/books/0005967298a6f595a36e9]) de Lionel Douthe, Baptiste Fray publicado por Lelivrescolaire.fr Éditions. Tanto o texto apresentado sobre a "História das ciências" como o problema respondido constam nas páginas [314 e 315](https://www.lelivrescolaire.fr/page/6225425). A tradução do texto é nossa em com colaboração com o ChatGPT.
 
 ### História das ciências
 
 As pesquisas de Georg Ohm (1789-1854) permitiram que ele formulasse, em 1827, uma relação matemática entre a tensão elétrica nos terminais de um condutor metálico (expressa em volt V) e a corrente elétrica que o atravessa (expressa em ampère A). A Lei de Ohm se apresenta na forma de uma relação de proporcionalidade: U = R.I, onde R representa a resistência elétrica do condutor metálico, expressa em ohms (Ω).
 
-Observação: O condutor ôhmico é um dipolo no qual a Lei de Ohm se aplica. Sua principal propriedade é opôr resistência ao fluxo da corrente elétrica. Ele é frequentemente chamado de resistor. Às vezes, ocorre confusão entre a resistência (o objeto) e a resistência R (a grandeza física que caracteriza o condutor ôhmico e é expressa em ohms).
+**Observação:** O condutor ôhmico é um dipolo no qual a Lei de Ohm se aplica. Sua principal propriedade é opôr resistência ao fluxo da corrente elétrica. Ele é frequentemente chamado de resistor. Às vezes, ocorre confusão entre a resistência (o objeto) e a resistência R (a grandeza física que caracteriza o condutor ôhmico e é expressa em ohms).
 
-Nota:  Em geral, um elemento de circuito (resistor, baterias, etc.), que possua dois terminais é chamado dipolo. 
+**Nota:**  Em geral, um elemento de circuito (resistor, baterias, etc.), que possua dois terminais é chamado dipolo. 
 
-Veja mais sobre [George Simon Ohm](https://www.youtube.com/watch?v=ouaUdZTu0x8&t=15s):
+Veja mais sobre a vida de George Simon Ohm:
 
-## Problema
+<iframe width="320" height="315" src="https://www.youtube.com/embed/ouaUdZTu0x8?si=3cbsIspQ_EJ4nPts" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+### Problema
 
 Fizemos medições da corrente que passa por um dipolo para diferentes tensões
 
-| U (V)  |  0   | 0,67 | 1,27 | 2,03 | 2,73 | 3,49 | 4,21 | 4,94 |
-|--------|------|------|------|------|------|------|------|------|
-| I (mA) |  0   |  3,0 |  5,7 |  9,1 | 12,3 | 15,7 | 19,0 | 22,3 |
+---
 
-1. Represente este conjunto de pontos U=f(I) usando a linguagem de programação Python, utilizando símbolos "+" de cor azul.
+| U (V)  | 0.00 | 0.67 | 1.27 | 2.03 | 2.73 | 3.49 | 4.21 | 4.94 |
+|-------|-----|-----|-----|-----|-----|-----|-----|-----|
+| I (mA) | 0.00 | 3.00 | 5.70 | 9.10 | 12.30 | 15.70 | 19.00 | 22.30 |
+
+---
+
+1. Represente este conjunto de pontos U=f(I) usando a linguagem de programação R, utilizando símbolos "+" de cor azul. (*adaptada*) 
 
 2. Sobrepõe a estes pontos experimentais a representação gráfica de um modelo matemático, do tipo aplicação linear a·x + b, em vermelho, usando a = 150 e b = 2.
 
 Varie os valores de a e b para que a reta do modelo se aproxime o máximo possível dos pontos experimentais.
 
 3. Este dipolo é realmente um resistor? Justifique. Especifique o valor da resistência do resistor.
+
+**Solução**
+
+O problema original pedia que para a solução fosse utilizada a linguagem Python. Aqui resolvemos em R, não tinha como não ser.
+
+veja a baixo o script comentado.
+```
+# Dados experimentais
+U <- c(0, 0.67, 1.27, 2.03, 2.73, 3.49, 4.21, 4.94)  # Definindo os valores de tensão
+I <- c(0, 3.0e-3, 5.7e-3, 9.1e-3, 12.3e-3, 15.7e-3, 19.0e-3, 22.3e-3)  # Definindo os valores de corrente
+
+# Plotagem do gráfico de dispersão
+plot(I, U, pch = "+", col = "blue", xlab = "Corrente (mA)", ylab = "Tensão (V)", main = "Relação Tensão-Corrente")
+# Aqui, estamos plotando um gráfico com os valores de corrente no eixo x e os valores de tensão no eixo y. Os pontos são marcados com o símbolo "+" e são azuis.
+
+# Coeficientes da equação da reta ajustada
+a <- 150  # Coeficiente angular (resistência em Ohms)
+b <- 2    # Coeficiente linear
+
+# Traçar a curva vermelha conectando os pontos previstos
+abline(b, a, col = "red")
+# Aqui, estamos adicionando uma linha reta vermelha ao gráfico. Esta linha representa o modelo linear ajustado aos pontos experimentais.
+
+# Imprimir os coeficientes calculados
+cat("Os coeficientes da reta ajustada são:\n")
+cat("a =", a, "\n")
+cat("b =", b, "\n")
+# Aqui, estamos imprimindo os coeficientes da reta ajustada, que são o coeficiente angular 'a' e o coeficiente linear 'b'.
+
+```
+No segundo ponto do problema é pedido que comecemos com os valors usando a = 150 e b = 2. Você percebe, na imagem abaixo, que o ajuste de curva em vermeçho não passa pelos pontos (+) gerados pelo programa. 
+
+![](ohm1.png){width=20cm, height=10cm}
+Temos que ajustar a curva vermelha aos pontos de (+) e conseguimos isso quando chegamos a  = 220 e b = 0. Veja!
+
+![](ohm2.png){width=20cm, height=10cm}
+ 
+Outra possibilidade de se resolver o problema é mostrado abaixo. Nesse script não precisamos ficar Variando os valores de a e b.
+
+```
+# Dados experimentais
+U <- c(0, 0.67, 1.27, 2.03, 2.73, 3.49, 4.21, 4.94)
+I <- c(0, 3.0e-3, 5.7e-3, 9.1e-3, 12.3e-3, 15.7e-3, 19.0e-3, 22.3e-3)
+
+# Explicação: Um vetor é uma lista ordenada de números. Aqui, temos dois vetores:
+# U, que armazena valores de tensão, e I, que armazena valores de corrente.
+
+# Plotagem do gráfico de dispersão
+plot(I, U, pch = "+", col = "blue", xlab = "Corrente (mA)", ylab = "Tensão (V)", main = "Relação Tensão-Corrente")
+
+# Explicação: Esta linha cria um gráfico com os valores de corrente (no eixo x) versus
+# os valores de tensão (no eixo y). Os pontos são marcados com um sinal de mais (+) em azul.
+
+# Ajuste do modelo linear
+coeficientes <- lm(U ~ I)$coefficients
+
+# Explicação: Aqui, estamos ajustando um modelo linear aos nossos dados experimentais.
+# Isso significa encontrar a melhor linha reta que se aproxima dos pontos no gráfico.
+# O $ acessa os resultados do modelo, e coefficients são os coeficientes desse modelo.
+
+a <- coeficientes[2]  # Coeficiente angular
+b <- coeficientes[1]  # Coeficiente linear
+
+# Explicação: O coeficiente a é a inclinação da linha reta no gráfico, e o coeficiente b
+# é o ponto onde a linha intercepta o eixo y (quando a corrente é zero).
+
+# Traçar a curva vermelha conectando os pontos previstos
+lines(I, a * I + b, col = "red")
+
+# Explicação: Aqui, estamos adicionando uma linha vermelha ao gráfico. Esta linha é
+# a nossa melhor estimativa de como a tensão (U) muda com a corrente (I), com base
+# no modelo linear que ajustamos anteriormente.
+
+# Verificação se o componente é um resistor e cálculo da resistência
+resistencia <- a
+
+if (resistencia > 0) {
+  cat("O componente é um resistor com resistência aproximada de", round(resistencia, 2), "Ohms.\n")
+} else {
+  cat("O componente não se comporta como um resistor.\n")
+}
+
+# Explicação: Aqui estamos verificando se o componente comporta-se como um resistor.
+# Se o coeficiente angular do modelo for maior que zero, podemos dizer que o componente
+# se comporta como um resistor. Em seguida, imprimimos a resistência aproximada do resistor.
+# Se o coeficiente angular for zero ou negativo, o componente não se comporta como um resistor.
+
+```
+
 ---
+
