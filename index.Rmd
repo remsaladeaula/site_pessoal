@@ -345,7 +345,7 @@ Fizemos medições da corrente que passa por um dipolo para diferentes tensões
 
 ---
 
-1. Represente este conjunto de pontos U=f(I) usando a linguagem de programação R, utilizando símbolos "+" de cor azul. (*adaptada*) 
+1. Represente este conjunto de pontos U=f(I) usando a linguagem de programação R, utilizando símbolos "+" de cor azul. (*adaptada: a questão original pede que seja utilizada a linguagem python.*) 
 
 2. Sobrepõe a estes pontos experimentais a representação gráfica de um modelo matemático, do tipo aplicação linear a·x + b, em vermelho, usando a = 150 e b = 2.
 
