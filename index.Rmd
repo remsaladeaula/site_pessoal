@@ -319,7 +319,7 @@ poly(time..s., 2, raw = TRUE)2
 
 ## Modelando a característica de um dipolo (Lei de OHM)
 
-Este *post* é baseado em um problema respondido na seção "LABO PYTHON" do livro [*“Physique-Chimie 2de”*]([https://www.calameo.com/books/0005967298a6f595a36e9]) de Lionel Douthe, Baptiste Fray publicado por Lelivrescolaire.fr Éditions. Tanto o texto apresentado sobre a "História das ciências" como o problema respondido constam nas páginas [314 e 315](https://www.lelivrescolaire.fr/page/6225425). A tradução do texto é nossa em com colaboração com o ChatGPT.
+Este *post* é baseado em um problema respondido na seção "LABO PYTHON" do livro [*“Physique-Chimie 2de”*](https://www.calameo.com/books/0005967298a6f595a36e9) de Lionel Douthe, Baptiste Fray publicado por Lelivrescolaire.fr Éditions. Tanto o texto apresentado sobre a "História das ciências" como o problema respondido constam nas páginas [314 e 315](https://www.lelivrescolaire.fr/page/6225425). A tradução do texto é nossa em com colaboração com o ChatGPT.
 
 ### História das ciências
 
