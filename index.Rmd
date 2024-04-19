@@ -385,6 +385,7 @@ cat("b =", b, "\n")
 No segundo ponto do problema é pedido que comecemos com os valors usando a = 150 e b = 2. Você percebe, na imagem abaixo, que o ajuste de curva em vermeçho não passa pelos pontos (+) gerados pelo programa. 
 
 ![](ohm1.png){width=20cm, height=10cm}
+
 Temos que ajustar a curva vermelha aos pontos de (+) e conseguimos isso quando chegamos a  = 220 e b = 0. Veja!
 
 ![](ohm2.png){width=20cm, height=10cm}
