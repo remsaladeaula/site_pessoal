@@ -611,7 +611,7 @@ O texto a seguir foi extraído do livro [*“Physique-Chimie 2de”*](https://ww
 - identificar as unidades e associá-las às grandezas em questão;
 - compreender as escalas utilizadas para os dois eixos.
 
-###Identificar a linearidade e interpretá-la
+### Identificar a linearidade e interpretá-la
 
 - **conhecer uma situação de linearidade.** Em algumas situações, ao representar em um gráfico uma grandeza A em função de uma grandeza B, os pontos colocados formam uma reta que passa pela origem do sistema de coordenadas. Mesmo que os pontos não estejam perfeitamente alinhados, então desenha-se uma reta média que passa o mais próximo possível de cada ponto.
 - **Interpretar a linearidade.** Traçar uma reta média significa que o físico interpreta seus resultados como demonstrando proporcionalidade entre as duas grandezas.
