@@ -599,3 +599,26 @@ i <- 3
 velocidade(coordenadas_x, coordenadas_y, Dt, i)
 ```
 ---
+
+O texto a seguir foi extraído do livro [*“Physique-Chimie 2de”*](https://www.calameo.com/books/0005967298a6f595a36e9) de Lionel Douthe, Baptiste Fray publicado por Lelivrescolaire.fr Éditions. Você pode tembém ter acesso a esse problema clicando [aqui](https://www.lelivrescolaire.fr/page/6226000). A tradução do texto é nossa em colaboração com o ChatGPT.
+
+## Leitura gráfica
+
+**Para ler, analisar e explorar um gráfico, é necessário seguir sempre os mesmos passos:**
+
+- identificar e compreender o título (sobre o que trata este gráfico);
+- observar a grandeza representada por cada um dos eixos, sendo o eixo vertical o eixo das ordenadas e o eixo horizontal o eixo das abscissas;
+- identificar as unidades e associá-las às grandezas em questão;
+- compreender as escalas utilizadas para os dois eixos.
+
+###Identificar a linearidade e interpretá-la
+
+- **conhecer uma situação de linearidade.** Em algumas situações, ao representar em um gráfico uma grandeza A em função de uma grandeza B, os pontos colocados formam uma reta que passa pela origem do sistema de coordenadas. Mesmo que os pontos não estejam perfeitamente alinhados, então desenha-se uma reta média que passa o mais próximo possível de cada ponto.
+- **Interpretar a linearidade.** Traçar uma reta média significa que o físico interpreta seus resultados como demonstrando proporcionalidade entre as duas grandezas.
+- **Proporcionalidade e linearidade.** A relação entre duas grandezas proporcionais pode ser traduzida matematicamente por uma igualdade matemática na forma: B=k⋅A.
+- **k** é chamado de coeficiente de proporcionalidade e corresponde à inclinação da reta média.
+- **Determinar o valor do coeficiente de proporcionalidade.** Para determinar o valor da inclinação da reta, é necessário ler as coordenadas (a; b) de um ponto localizado na reta média. O valor k da inclinação da reta é então k= a/b e sua unidade é a unidade de a dividida pela de b.
+
+![](ohm2.png){width=20cm, height=10cm}
+
+---
