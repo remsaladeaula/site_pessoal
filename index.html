@@ -1011,6 +1011,76 @@ descoberto, onda após onda.</p>
 <hr />
 </div>
 </div>
+<div id="explorando-a-trajetória-e-velocidade-de-um-ponto-móvel"
+class="section level2">
+<h2>Explorando a Trajetória e Velocidade de um Ponto Móvel</h2>
+<p><strong>Autores:</strong> <em>Adeil Araújo em colaboração com o
+ChatGPT</em></p>
+<p>Nesta atividade, vamos aprender como plotar a trajetória de um ponto
+móvel e calcular sua velocidade em diferentes pontos ao longo do
+percurso. Utilizaremos um conjunto de coordenadas fornecidas para
+representar a trajetória do ponto móvel.</p>
+<div id="passo-1-definição-das-coordenadas" class="section level3">
+<h3>Passo 1: Definição das Coordenadas</h3>
+<p>Antes de tudo, precisamos definir as coordenadas do ponto móvel ao
+longo de sua trajetória. Utilizaremos um vetor de coordenadas que contém
+os valores das coordenadas x e y em intervalos conhecidos.</p>
+<pre><code>coordenadas &lt;- c(0, 0, 1, 0.125, 2, 0.5, 3, 1.125, 4, 2, 5, 3.125, 6, 4.5, 7, 6.125, 8, 8)</code></pre>
+</div>
+<div id="passo-2-divisão-das-coordenadas-em-pares-x-y"
+class="section level3">
+<h3>Passo 2: Divisão das Coordenadas em Pares (x, y)</h3>
+<p>Em seguida, dividimos as coordenadas em pares ordenados (x, y) para
+facilitar a plotagem da trajetória.</p>
+<pre><code># Dividindo as coordenadas em pares (x, y)
+coordenadas_x &lt;- coordenadas[seq(1, length(coordenadas), by = 2)]
+coordenadas_y &lt;- coordenadas[seq(2, length(coordenadas), by = 2)]</code></pre>
+</div>
+<div id="passo-3-plotagem-da-trajetória" class="section level3">
+<h3>Passo 3: Plotagem da Trajetória</h3>
+<p>Com as coordenadas divididas, podemos plotar a trajetória do ponto
+móvel em um gráfico bidimensional.</p>
+<pre><code># Plotando a trajetória do ponto móvel
+plot(coordenadas_x, coordenadas_y, type = &quot;b&quot;, pch = 16, col = &quot;blue&quot;,
+     xlab = &quot;Coordenada X&quot;, ylab = &quot;Coordenada Y&quot;, main = &quot;Trajetória do Ponto Móvel&quot;)</code></pre>
+</div>
+<div id="passo-4-cálculo-e-visualização-da-velocidade"
+class="section level3">
+<h3>Passo 4: Cálculo e Visualização da Velocidade</h3>
+<p>Além de observar a trajetória, também estamos interessados em
+entender a velocidade do ponto móvel em diferentes pontos ao longo da
+trajetória. Para isso, calculamos o vetor velocidade em um ponto
+específico e o visualizamos no gráfico.</p>
+<pre><code># Função para calcular e plotar o vetor velocidade
+velocidade &lt;- function(x, y, Dt, i) {
+  # Cálculo das coordenadas do vetor velocidade
+  vx &lt;- (x[i + 1] - x[i - 1]) / (2 * Dt)
+  vy &lt;- (y[i + 1] - y[i - 1]) / (2 * Dt)
+  
+  # Plotando o vetor velocidade
+  arrows(x0 = x[i], y0 = y[i], x1 = x[i] + vx, y1 = y[i] + vy, col = &quot;red&quot;, length = 0.1)
+}
+
+# Intervalo de tempo
+Dt &lt;- 1
+
+# Índice do ponto
+i &lt;- 3
+
+# Chamando a função velocidade
+velocidade(coordenadas_x, coordenadas_y, Dt, i)</code></pre>
+<p><img src="trajetoria.png" style="height:10cm" /></p>
+<p>Com esses passos, conseguimos visualizar a trajetória e calcular a
+velocidade do ponto móvel em diferentes pontos ao longo do percurso.
+Experimente ajustar os parâmetros e explore as diferentes
+possibilidades!</p>
+<p>Este texto fornece uma explicação passo a passo de como o código pode
+ser usado em uma atividade prática de física, ajudando os alunos a
+entenderem os conceitos de trajetória e velocidade de forma visual e
+interativa.</p>
+<hr />
+</div>
+</div>
 
 
 
