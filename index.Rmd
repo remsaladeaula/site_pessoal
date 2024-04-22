@@ -568,4 +568,34 @@ Com esses passos, conseguimos visualizar a trajetória e calcular a velocidade d
 
 Este texto fornece uma explicação passo a passo de como o código pode ser usado em uma atividade prática de física, ajudando os alunos a entenderem os conceitos de trajetória e velocidade de forma visual e interativa.
 
+Veja o código completo abaixo:
+
+```
+# Coordenadas do ponto móvel
+coordenadas <- c(0, 0, 1, 0.125, 2, 0.5, 3, 1.125, 4, 2, 5, 3.125, 6, 4.5, 7, 6.125, 8, 8)
+# Dividindo as coordenadas em pares (x, y)
+coordenadas_x <- coordenadas[seq(1, length(coordenadas), by = 2)]
+coordenadas_y <- coordenadas[seq(2, length(coordenadas), by = 2)]
+# Plotando a trajetória do ponto móvel
+plot(coordenadas_x, coordenadas_y, type = "b", pch = 16, col = "blue",
+     xlab = "Coordenada X", ylab = "Coordenada Y", main = "Trajetória do Ponto Móvel")
+# Função para calcular e plotar o vetor velocidade
+velocidade <- function(x, y, Dt, i) {
+  # Cálculo das coordenadas do vetor velocidade
+  vx <- (x[i + 1] - x[i - 1]) / (2 * Dt)
+  vy <- (y[i + 1] - y[i - 1]) / (2 * Dt)
+  
+  # Plotando o vetor velocidade
+  arrows(x0 = x[i], y0 = y[i], x1 = x[i] + vx, y1 = y[i] + vy, col = "red", length = 0.1)
+}
+
+# Intervalo de tempo
+Dt <- 1
+
+# Índice do ponto
+i <- 3
+
+# Chamando a função velocidade
+velocidade(coordenadas_x, coordenadas_y, Dt, i)
+```
 ---

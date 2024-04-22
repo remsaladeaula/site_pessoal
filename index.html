@@ -1078,6 +1078,33 @@ possibilidades!</p>
 ser usado em uma atividade prática de física, ajudando os alunos a
 entenderem os conceitos de trajetória e velocidade de forma visual e
 interativa.</p>
+<p>Veja o código completo abaixo:</p>
+<pre><code># Coordenadas do ponto móvel
+coordenadas &lt;- c(0, 0, 1, 0.125, 2, 0.5, 3, 1.125, 4, 2, 5, 3.125, 6, 4.5, 7, 6.125, 8, 8)
+# Dividindo as coordenadas em pares (x, y)
+coordenadas_x &lt;- coordenadas[seq(1, length(coordenadas), by = 2)]
+coordenadas_y &lt;- coordenadas[seq(2, length(coordenadas), by = 2)]
+# Plotando a trajetória do ponto móvel
+plot(coordenadas_x, coordenadas_y, type = &quot;b&quot;, pch = 16, col = &quot;blue&quot;,
+     xlab = &quot;Coordenada X&quot;, ylab = &quot;Coordenada Y&quot;, main = &quot;Trajetória do Ponto Móvel&quot;)
+# Função para calcular e plotar o vetor velocidade
+velocidade &lt;- function(x, y, Dt, i) {
+  # Cálculo das coordenadas do vetor velocidade
+  vx &lt;- (x[i + 1] - x[i - 1]) / (2 * Dt)
+  vy &lt;- (y[i + 1] - y[i - 1]) / (2 * Dt)
+  
+  # Plotando o vetor velocidade
+  arrows(x0 = x[i], y0 = y[i], x1 = x[i] + vx, y1 = y[i] + vy, col = &quot;red&quot;, length = 0.1)
+}
+
+# Intervalo de tempo
+Dt &lt;- 1
+
+# Índice do ponto
+i &lt;- 3
+
+# Chamando a função velocidade
+velocidade(coordenadas_x, coordenadas_y, Dt, i)</code></pre>
 <hr />
 </div>
 </div>
