@@ -491,7 +491,7 @@ plot(x, F, type = "l", col = "red", xlab = "X (cm)", ylab = "Y", main = "Propaga
 5. `t <- 1.5`: Aqui, estamos definindo um momento específico no tempo para o que queremos calcular a onda. Neste exemplo, estamos usando t = 1,5.
 6. `k <- 2 * pi / (v * T)`: Esta linha calcula o número de onda k, que é uma constante relacionada à frequência e à velocidade da onda.
 7. `F <- A * sin(2 * pi / T * t - k * x)`: Aqui, calculamos a função da onda para o momento específico t. Esta expressão representa a forma da onda em relação à posição xe ao tempo t. Utilizamos a função seno para modelar a onda senoidal.
-8. `plot(x, F, type = "l", col = "red", xlab = "X (cm)", ylab = "Y", main = "Propagação da Onda")`: Finalmente, esta linha plota a onda no gráfico cartesiano. O argumento `type = "l"`indica que queremos uma linha contínua no gráfico, e `col = "red"`especifica que queremos a cor da linha vermelha. Os argumentos `xlab`, `ylab`e `main`são usados ​​para rotular os eixos xey, bem como o título dos gráficos.
+8. `plot(x, F, type = "l", col = "red"...)`: Finalmente, esta linha plota a onda no gráfico cartesiano. O argumento `type = "l"`indica que queremos uma linha contínua no gráfico, e `col = "red"`especifica que queremos a cor da linha vermelha. Os argumentos `xlab`, `ylab`e `main`são usados ​​para rotular os eixos xey, bem como o título dos gráficos.
 
 ### Desafios e Descobertas: Explorando Além das Ondas
 
