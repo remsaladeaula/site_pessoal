@@ -28,7 +28,7 @@ Para construir este blog utilizei como referência o blog *Live Free or Dichotom
 
 ## Um pouco de história da liguagem R
 
-A linguagem R, nasceu nos anos 90, mas se popularizou mesmo nos anos 2000 quando **R**oss Ihaka e **R**obert Gentleman, professores de estatítica da Nova Zelândia trouxeram ao púlico a primeira versão da linguagem. No livro *Utilizando a linguagem R: conceitos, manipulação, modelagem e elaboração de relatórios* a autora Luciene Ferreira conta que "*Talvez por conincidência, as iniciais do nome desses professores iniciam pela letra R, uma boa hipótese para terem nomeado a linguagem de R*"
+A linguagem R, nasceu nos anos 90, mas se popularizou mesmo nos anos 2000 quando **R**oss Ihaka e **R**obert Gentleman, professores de estatítica da Nova Zelândia trouxeram ao público a primeira versão da linguagem. No livro *Utilizando a linguagem R: conceitos, manipulação, modelagem e elaboração de relatórios* a autora Luciene Ferreira conta que "*Talvez por conincidência, as iniciais do nome desses professores iniciam pela letra R, uma boa hipótese para terem nomeado a linguagem de R*"
 
 Link para aquisição do livro na [Amazon](https://www.amazon.com.br/Utilizando-linguagem-manipula%C3%A7%C3%A3o-visualiza%C3%A7%C3%A3o-elabora%C3%A7%C3%A3o/dp/8550814423).
 
