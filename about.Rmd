@@ -43,12 +43,12 @@ O **PET Estatística** da Universidade Federal do Ceará - UFC possui uma ativid
 Na página do [PET Estatítica](https://sites.google.com/view/petestatisticaufc/atividades) você consegue baixar uma [apostila](https://drive.google.com/file/d/1koBbKSarTit1jUBt0jLrGnjF3TMLCu7s/view) de introdução à R para escolas.Visite!
 
 ---
+## As postagens te ajudaram? 
 
-As postagens te ajudaram? Se sim, me ajude a manter o blog ativo. 
-Faça uma doação para mater o blog funcionando.
+**Se sim, me ajude a manter o blog ativo. Faça uma doação.**
 
 ![](pix2.png){width=10cm, height=5cm}
 
-![](logo_pix.png){width=10cm, height=5cm}
+![](logo_pix.png){width=5cm, height=1cm}
 
 Francisco Adeil Gomes de Araújo
