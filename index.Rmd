@@ -623,13 +623,13 @@ O texto a seguir foi extraído do livro [*“Physique-Chimie 2de”*](https://ww
 
 ---
 
-# As postagens te ajudaram? Se sim, me ajude a manter o blog ativo. 
-## Faça uma doação para mater o blog funcionando.
+As postagens te ajudaram? Se sim, me ajude a manter o blog ativo. 
+Faça uma doação para mater o blog funcionando.
 
 ![](pix2.png){width=10cm, height=5cm}
 
 ![](logo_pix.png){width=10cm, height=5cm}
 
-
 Francisco Adeil Gomes de Araújo
+
 ---
