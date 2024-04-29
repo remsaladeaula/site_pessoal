@@ -14,19 +14,19 @@ output:
 title: "Bugs, histórias, Etc & tal"
 ---
 
-## Sobre o autor do blog
+## Sobre o autor do blog😊
 
 Sou professor de Física da rede pública estadual do Ceará. Tenho mestrado em Ensino de Física (MNPEF/UECE) e nos últimos anos tenho me dedicado a escrever sobre programação para o ensino de Física. Em 2023 publiquei o livro [Julia com física: uma introdução](https://www.seduc.ce.gov.br/wp-content/uploads/sites/37/2023/09/Ebook-02-Julia-com-Fisica.pdf) e em 2024 lançarei o livro *Modelagem computacional com o Web VPython: Mecânica*. A iniciativa de começar a escrever este blog se deu pela necessidade de aprender a trabalhar com planilhas em R. Estou super motivado a começar essa viagem. Caso tenha interesse também mantenho outro blog [Julia com física](https://juliacomfisica.github.io/). Essas e outras produções estão listadas no [meu site pessoal](https://adeil83.github.io/).
 
 ---
 
-## Referência para construção deste blog
+## Referência para construção deste blog✌️
 
 Para construir este blog utilizei como referência o blog *Live Free or Dichotomize* [How to make an R Markdown website (with RStudio!)](https://livefreeordichotomize.com/posts/2017-08-08-how-to-make-an-rmarkdown-website/index.html) seguindo as intruções passo a passo você conseguirá construir seu blog com R Markdown também. Se quiser, é claro!
 
 ---
 
-## Um pouco de história da liguagem R
+## Um pouco de história da liguagem R📖
 
 A linguagem R, nasceu nos anos 90, mas se popularizou mesmo nos anos 2000 quando **R**oss Ihaka e **R**obert Gentleman, professores de estatítica da Nova Zelândia trouxeram ao público a primeira versão da linguagem. No livro *Utilizando a linguagem R: conceitos, manipulação, modelagem e elaboração de relatórios* a autora Luciene Ferreira conta que "*Talvez por conincidência, as iniciais do nome desses professores iniciam pela letra R, uma boa hipótese para terem nomeado a linguagem de R*"
 
@@ -34,7 +34,7 @@ Link para aquisição do livro na [Amazon](https://www.amazon.com.br/Utilizando-
 
 ---
 
-## Material para estudo
+## Material para estudo👓
 
 O **PET Estatística** da Universidade Federal do Ceará - UFC possui uma atividade com R nas escolas.
 
@@ -44,7 +44,7 @@ Na página do [PET Estatítica](https://sites.google.com/view/petestatisticaufc/
 
 ---
 
-## Outras publicações do autor
+## Outras publicações do autor📚
 
 * **Livros**
 
@@ -69,7 +69,7 @@ ARAÚJO, F. A. G.; OLIVEIRA, M. M. ; NOBRE, E. F. . [Science Interval Project: W
 
 ARAÚJO, F. A. G.; OLIVEIRA, M. M. ; NOBRE, E.F. ; Pinheiro, A.G ; Cunha, M.S. .[A VIDEOANÁLISE DO MOVIMENTO DE UM FOGUETE DE PALITO DE FÓSFORO](https://periodicos.unb.br/index.php/rpf/article/view/7073). Revista do Professor de Física, v. 1, p. 68-80, 2017.
 
-ARAÚJO, F. A. G.; OLIVEIRA, M. M. ; NOBRE, E.F. ; Pinheiro, A.G ; Cunha, M.S. . [O ESTUDO DE DIN MICA DOS FLUIDOS COM O APLICATIVO WIND TUNNEL](https://periodicos.unb.br/index.php/rpf/article/view/7070). Revista do Professor de Física, v. 1, p. 25-36, 2017.
+ARAÚJO, F. A. G.; OLIVEIRA, M. M. ; NOBRE, E.F. ; Pinheiro, A.G ; Cunha, M.S. . [O ESTUDO DE DINÂMICA DOS FLUIDOS COM O APLICATIVO WIND TUNNEL](https://periodicos.unb.br/index.php/rpf/article/view/7070). Revista do Professor de Física, v. 1, p. 25-36, 2017.
 
 * **Blogs**
 
@@ -81,7 +81,7 @@ Adeil Araújo e Meirivâni Oliveira, [Intervalo Ciência](https://intervalocienc
 
 ## As postagens te ajudaram? 
 
-**Se sim, me ajude a manter o blog ativo. Faça uma doação.**
+**Se sim, me pague um cafézim ☕️☕️☕️😉.**
 
 ![](pix2.png){width=10cm, height=5cm}
 
