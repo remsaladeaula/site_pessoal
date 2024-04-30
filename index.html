@@ -363,7 +363,7 @@ login com sua conta do Gmail ou do Github e acessar o R na nuvem.</p>
 </div>
 <div id="r-como-calculadora" class="section level2">
 <h2>R como calculadora📚</h2>
-<pre><code>3+1 #adição
+<pre class="r"><code>3+1 #adição
 ## [1] 4
 
 5-3 #subtração
@@ -411,7 +411,7 @@ depois de quanto tempo o martelo alcançaria o solo? Dado: aceleração da
 gravidade na Lua <span class="math inline">\(\simeq\)</span>
 1,6m/s<sup>2</sup>.</p>
 <p><em>Resolução:</em></p>
-<pre><code># Dados
+<pre class="r"><code># Dados
 v0 &lt;- 0 # Velocidade inicial (partiu do repouso)
 h &lt;- 1.6 # Altura de queda (em metros)
 a &lt;- 1.6 # Aceleração da gravidade na Lua (em m/s^2)
@@ -475,7 +475,7 @@ deste livro?</p>
 <li>Fahrenheit 233.</li>
 </ol>
 <p><em>Resolução:</em></p>
-<pre><code># Dados
+<pre class="r"><code># Dados
 TC &lt;- 233 # Temperatura em celsius
 
 # Calculando a temperatura em fahrenheit (usando a fórmula)
@@ -579,7 +579,7 @@ o arquivo CSV para download.</p>
 <p>Com o arquivo CSV em mãos e considerando que o arquivo “bola.csv”
 está no mesmo diretório onde o código que será executado.Podemos abrir o
 Rstudio e digitar o código abaixo.</p>
-<pre><code>getwd()
+<pre class="r"><code>getwd()
 
 # Leia o arquivo CSV (supondo que o arquivo &quot;bola.csv&quot; esteja no mesmo diretório)
 dados = read.csv(&quot;bola.csv&quot;)
@@ -668,7 +668,7 @@ como a bola se comporta.</p>
 <p><strong>EXTRA!</strong></p>
 <p>Para obter os coeficientes separadamente, você pode digitar os
 comandos abaixo:</p>
-<pre><code># Coeficientes
+<pre class="r"><code># Coeficientes
 coeficientes &lt;- coef(modelo)
 intercepto &lt;- coeficientes[1]
 coef_linear &lt;- coeficientes[2]
@@ -684,7 +684,7 @@ print(&quot;Coeficiente Quadrático:&quot;)
 print(coef_quadratico)
 </code></pre>
 <p>Saída do programa:</p>
-<pre><code>&gt; coeficientes &lt;- coef(modelo)
+<pre class="r"><code>&gt; coeficientes &lt;- coef(modelo)
 &gt; intercepto &lt;- coeficientes[1]
 &gt; coef_linear &lt;- coeficientes[2]
 &gt; coef_quadratico &lt;- coeficientes[3]
@@ -819,7 +819,7 @@ da resistência do resistor.</li>
 <p>O problema original pedia que para a solução fosse utilizada a
 linguagem Python. Aqui resolvemos em R, não tinha como não ser.</p>
 <p>veja a baixo o script comentado.</p>
-<pre><code># Dados experimentais
+<pre class="r"><code># Dados experimentais
 U &lt;- c(0, 0.67, 1.27, 2.03, 2.73, 3.49, 4.21, 4.94)  # Definindo os valores de tensão
 I &lt;- c(0, 3.0e-3, 5.7e-3, 9.1e-3, 12.3e-3, 15.7e-3, 19.0e-3, 22.3e-3)  # Definindo os valores de corrente
 
@@ -850,7 +850,7 @@ isso quando chegamos a = 220 e b = 0. Veja!</p>
 <p><img src="ohm2.png" style="height:10cm" /></p>
 <p>Outra possibilidade de se resolver o problema é mostrado abaixo.
 Nesse script não precisamos ficar Variando os valores de a e b.</p>
-<pre><code># Dados experimentais
+<pre class="r"><code># Dados experimentais
 U &lt;- c(0, 0.67, 1.27, 2.03, 2.73, 3.49, 4.21, 4.94)
 I &lt;- c(0, 3.0e-3, 5.7e-3, 9.1e-3, 12.3e-3, 15.7e-3, 19.0e-3, 22.3e-3)
 
@@ -939,7 +939,7 @@ mostra a propagação da onda ao longo do eixo x, com picos e vales
 representados em vermelho, proporcionando uma visão vívida da
 “Propagação da Onda”.</p>
 <p>Vejamos um exemplo prático de como isso é feito:</p>
-<pre><code># Definindo os parâmetros da onda
+<pre class="r"><code>   # Definindo os parâmetros da onda
 A &lt;- 0.9
 v &lt;- 2
 T &lt;- 0.25
@@ -954,7 +954,7 @@ F &lt;- A * sin(2 * pi / T * t - k * x)
 
 # Plotando a onda
 plot(x, F, type = &quot;l&quot;, col = &quot;red&quot;, xlab = &quot;X (cm)&quot;, ylab = &quot;Y&quot;, main = &quot;Propagação da Onda&quot;)
-</code></pre>
+   </code></pre>
 <p><img src="ondas.png" style="height:10cm" /></p>
 <p>Vou explicar cada linha do código:</p>
 <ol style="list-style-type: decimal">
@@ -1025,14 +1025,14 @@ representar a trajetória do ponto móvel.</p>
 <p>Antes de tudo, precisamos definir as coordenadas do ponto móvel ao
 longo de sua trajetória. Utilizaremos um vetor de coordenadas que contém
 os valores das coordenadas x e y em intervalos conhecidos.</p>
-<pre><code>coordenadas &lt;- c(0, 0, 1, 0.125, 2, 0.5, 3, 1.125, 4, 2, 5, 3.125, 6, 4.5, 7, 6.125, 8, 8)</code></pre>
+<pre class="r"><code>coordenadas &lt;- c(0, 0, 1, 0.125, 2, 0.5, 3, 1.125, 4, 2, 5, 3.125, 6, 4.5, 7, 6.125, 8, 8)</code></pre>
 </div>
 <div id="passo-2-divisão-das-coordenadas-em-pares-x-y"
 class="section level3">
 <h3>Passo 2: Divisão das Coordenadas em Pares (x, y)</h3>
 <p>Em seguida, dividimos as coordenadas em pares ordenados (x, y) para
 facilitar a plotagem da trajetória.</p>
-<pre><code># Dividindo as coordenadas em pares (x, y)
+<pre class="r"><code># Dividindo as coordenadas em pares (x, y)
 coordenadas_x &lt;- coordenadas[seq(1, length(coordenadas), by = 2)]
 coordenadas_y &lt;- coordenadas[seq(2, length(coordenadas), by = 2)]</code></pre>
 </div>
@@ -1040,7 +1040,7 @@ coordenadas_y &lt;- coordenadas[seq(2, length(coordenadas), by = 2)]</code></pre
 <h3>Passo 3: Plotagem da Trajetória</h3>
 <p>Com as coordenadas divididas, podemos plotar a trajetória do ponto
 móvel em um gráfico bidimensional.</p>
-<pre><code># Plotando a trajetória do ponto móvel
+<pre class="r"><code># Plotando a trajetória do ponto móvel
 plot(coordenadas_x, coordenadas_y, type = &quot;b&quot;, pch = 16, col = &quot;blue&quot;,
      xlab = &quot;Coordenada X&quot;, ylab = &quot;Coordenada Y&quot;, main = &quot;Trajetória do Ponto Móvel&quot;)</code></pre>
 </div>
@@ -1051,7 +1051,7 @@ class="section level3">
 entender a velocidade do ponto móvel em diferentes pontos ao longo da
 trajetória. Para isso, calculamos o vetor velocidade em um ponto
 específico e o visualizamos no gráfico.</p>
-<pre><code># Função para calcular e plotar o vetor velocidade
+<pre class="r"><code># Função para calcular e plotar o vetor velocidade
 velocidade &lt;- function(x, y, Dt, i) {
   # Cálculo das coordenadas do vetor velocidade
   vx &lt;- (x[i + 1] - x[i - 1]) / (2 * Dt)
@@ -1079,7 +1079,7 @@ ser usado em uma atividade prática de física, ajudando os alunos a
 entenderem os conceitos de trajetória e velocidade de forma visual e
 interativa.</p>
 <p>Veja o código completo abaixo:</p>
-<pre><code># Coordenadas do ponto móvel
+<pre class="r"><code># Coordenadas do ponto móvel
 coordenadas &lt;- c(0, 0, 1, 0.125, 2, 0.5, 3, 1.125, 4, 2, 5, 3.125, 6, 4.5, 7, 6.125, 8, 8)
 # Dividindo as coordenadas em pares (x, y)
 coordenadas_x &lt;- coordenadas[seq(1, length(coordenadas), by = 2)]

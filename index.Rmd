@@ -28,7 +28,7 @@ Para criar este blog estou utilizando o R instalado na minha máquina. Porém, c
 
 ## R como calculadora📚
 
-```
+```r
 3+1 #adição
 ## [1] 4
 
@@ -71,7 +71,7 @@ Em 1971, o astronauta americano David Scott realizou, na superfície da Lua, o e
 
 *Resolução:*
 
-```
+```r
 # Dados
 v0 <- 0 # Velocidade inicial (partiu do repouso)
 h <- 1.6 # Altura de queda (em metros)
@@ -121,7 +121,7 @@ e. Fahrenheit 233.
 
 *Resolução:*
 
-```
+```r
 # Dados
 TC <- 233 # Temperatura em celsius
 
@@ -192,7 +192,7 @@ A partir desse momento estou considerando que você fez a leitura do apêndice B
 Com o arquivo CSV em mãos e considerando que o arquivo "bola.csv" está no mesmo diretório onde o código que será executado.Podemos abrir o Rstudio e digitar o código abaixo.
 
 
-```
+```r
 getwd()
 
 # Leia o arquivo CSV (supondo que o arquivo "bola.csv" esteja no mesmo diretório)
@@ -261,7 +261,8 @@ Veja a saída do código abaixo:
 **EXTRA!**
 
 Para obter os coeficientes separadamente, você pode digitar os comandos abaixo:
-```
+
+```r
 # Coeficientes
 coeficientes <- coef(modelo)
 intercepto <- coeficientes[1]
@@ -279,7 +280,8 @@ print(coef_quadratico)
 
 ```
 Saída do programa: 
-```
+
+```r
 > coeficientes <- coef(modelo)
 > intercepto <- coeficientes[1]
 > coef_linear <- coeficientes[2]
@@ -358,7 +360,8 @@ Varie os valores de a e b para que a reta do modelo se aproxime o máximo possí
 O problema original pedia que para a solução fosse utilizada a linguagem Python. Aqui resolvemos em R, não tinha como não ser.
 
 veja a baixo o script comentado.
-```
+
+```r
 # Dados experimentais
 U <- c(0, 0.67, 1.27, 2.03, 2.73, 3.49, 4.21, 4.94)  # Definindo os valores de tensão
 I <- c(0, 3.0e-3, 5.7e-3, 9.1e-3, 12.3e-3, 15.7e-3, 19.0e-3, 22.3e-3)  # Definindo os valores de corrente
@@ -392,7 +395,7 @@ Temos que ajustar a curva vermelha aos pontos de (+) e conseguimos isso quando c
  
 Outra possibilidade de se resolver o problema é mostrado abaixo. Nesse script não precisamos ficar Variando os valores de a e b.
 
-```
+```r
 # Dados experimentais
 U <- c(0, 0.67, 1.27, 2.03, 2.73, 3.49, 4.21, 4.94)
 I <- c(0, 3.0e-3, 5.7e-3, 9.1e-3, 12.3e-3, 15.7e-3, 19.0e-3, 22.3e-3)
@@ -461,7 +464,7 @@ if (resistencia > 0) {
 
    Vejamos um exemplo prático de como isso é feito: 
    
-   ```
+```r
    # Definindo os parâmetros da onda
 A <- 0.9
 v <- 2
@@ -478,7 +481,7 @@ F <- A * sin(2 * pi / T * t - k * x)
 # Plotando a onda
 plot(x, F, type = "l", col = "red", xlab = "X (cm)", ylab = "Y", main = "Propagação da Onda")
    
-   ```
+```
    
    ![](ondas.png){width=20cm, height=10cm}
    
@@ -515,7 +518,7 @@ Nesta atividade, vamos aprender como plotar a trajetória de um ponto móvel e c
 
 Antes de tudo, precisamos definir as coordenadas do ponto móvel ao longo de sua trajetória. Utilizaremos um vetor de coordenadas que contém os valores das coordenadas x e y em intervalos conhecidos.
 
-```
+```r
 coordenadas <- c(0, 0, 1, 0.125, 2, 0.5, 3, 1.125, 4, 2, 5, 3.125, 6, 4.5, 7, 6.125, 8, 8)
 ```
 
@@ -523,7 +526,7 @@ coordenadas <- c(0, 0, 1, 0.125, 2, 0.5, 3, 1.125, 4, 2, 5, 3.125, 6, 4.5, 7, 6.
 
 Em seguida, dividimos as coordenadas em pares ordenados (x, y) para facilitar a plotagem da trajetória.
 
-```
+```r
 # Dividindo as coordenadas em pares (x, y)
 coordenadas_x <- coordenadas[seq(1, length(coordenadas), by = 2)]
 coordenadas_y <- coordenadas[seq(2, length(coordenadas), by = 2)]
@@ -532,7 +535,7 @@ coordenadas_y <- coordenadas[seq(2, length(coordenadas), by = 2)]
 
 Com as coordenadas divididas, podemos plotar a trajetória do ponto móvel em um gráfico bidimensional.
 
-```
+```r
 # Plotando a trajetória do ponto móvel
 plot(coordenadas_x, coordenadas_y, type = "b", pch = 16, col = "blue",
      xlab = "Coordenada X", ylab = "Coordenada Y", main = "Trajetória do Ponto Móvel")
@@ -541,7 +544,7 @@ plot(coordenadas_x, coordenadas_y, type = "b", pch = 16, col = "blue",
 
 Além de observar a trajetória, também estamos interessados em entender a velocidade do ponto móvel em diferentes pontos ao longo da trajetória. Para isso, calculamos o vetor velocidade em um ponto específico e o visualizamos no gráfico.
 
-```
+```r
 # Função para calcular e plotar o vetor velocidade
 velocidade <- function(x, y, Dt, i) {
   # Cálculo das coordenadas do vetor velocidade
@@ -570,7 +573,7 @@ Este texto fornece uma explicação passo a passo de como o código pode ser usa
 
 Veja o código completo abaixo:
 
-```
+```r
 # Coordenadas do ponto móvel
 coordenadas <- c(0, 0, 1, 0.125, 2, 0.5, 3, 1.125, 4, 2, 5, 3.125, 6, 4.5, 7, 6.125, 8, 8)
 # Dividindo as coordenadas em pares (x, y)
