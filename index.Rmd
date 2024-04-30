@@ -20,13 +20,13 @@ Neste blog pretendo dar *insights* para que professores possam utilizar a lingua
 
 ---
 
-## Uso remoto do R📚
+## Uso remoto do R💻
 
 Para criar este blog estou utilizando o R instalado na minha máquina. Porém, caso você não queira instalá-lo na sua ou esteja utilizando um computador público: laboratório de informática, casa de amigos, etc. aconselho a usar o [RStudio Cloud](https://posit.cloud/). Tudo o que você fizer ficará armazenado na nuvem e poderá ser acessado posteriormente em outro computador. No RStudio Cloud Você pode fazer o login com sua conta do Gmail ou do Github e acessar o R na nuvem.
 
 ---
 
-## R como calculadora📚
+## R como calculadora🧮
 
 ```r
 3+1 #adição
@@ -63,9 +63,9 @@ Neste Post usamos o RStudio Cloud. Faça o teste!
 
 ---
 
-## Resolvendo problemas de física básica📚
+## Resolvendo problemas de física básica🧲⚙️📐
 
-### Problema 1 - Queda livre 
+### Problema 1 - Queda livre☄️
 
 Em 1971, o astronauta americano David Scott realizou, na superfície da Lua, o experimento de queda livre dos corpos no vácuo, anteriormente proposto por Galileu. Deixou cair ali uma pena e um martelo, simultaneamente, a partir da mesma posição. Supondo que ambos os objetos tenham sido soltos de uma altura de 1,6 m em relação à superfície, depois de quanto tempo o martelo alcançaria o solo? Dado: aceleração da gravidade na Lua $\simeq$ 1,6m/s^2^.
 
@@ -109,7 +109,7 @@ Veja o vídeo deste momento histórico:
 
 <iframe width="320" height="315" src="https://www.youtube.com/embed/_Zo9jIzAssA?si=EBQuNOEgGQ1Bdzpi" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-### Problema 2 - Conversão de temperatura
+### Problema 2 - Conversão de temperatura🌡️
 
 Sabe-se que a temperatura na qual o papel entra em combustão é de 233^0^C. O título de um famoso livro de ficção científica é o valor aproximado desta temperatura na escala Fahrenheit. Qual é o título deste livro?
 
@@ -154,7 +154,7 @@ Vou analisar o código linha a linha:
 
 ---
 
-## Explorando dados de um arquivo CSV com R: Aplicações no Ensino de Física📚
+## Explorando dados de um arquivo CSV com R: Aplicações no Ensino de Física💾
 
 ### Contextualização
 
@@ -319,7 +319,7 @@ poly(time..s., 2, raw = TRUE)2
   
 ---
 
-## Modelando a característica de um dipolo (Lei de OHM)📚
+## Modelando a característica de um dipolo (Lei de OHM)⚡️
 
 Este *post* é baseado em um problema respondido na seção "LABO PYTHON" do livro [*“Physique-Chimie 2de”*](https://www.calameo.com/books/0005967298a6f595a36e9) de Lionel Douthe, Baptiste Fray publicado por Lelivrescolaire.fr Éditions. Tanto o texto apresentado aqui sobre a "História das ciências" bem como o problema respondido constam nas páginas 314 e 315 do livro. Você pode tembém ter acesso a esse problema clicando [aqui](https://www.lelivrescolaire.fr/page/6225425). A tradução do texto é nossa em colaboração com o ChatGPT.
 
@@ -446,7 +446,7 @@ if (resistencia > 0) {
 ```
 ---
 
-## Explorando as Maravilhas das Ondas: da Teoria à Simulação Prática📚
+## Explorando as Maravilhas das Ondas: da Teoria à Simulação Prática🌊
 
 **Autores:** *Adeil Araújo em colaboração com o ChatGPT*
 
@@ -508,7 +508,7 @@ plot(x, F, type = "l", col = "red", xlab = "X (cm)", ylab = "Y", main = "Propaga
    
 ---
 
-## Explorando a Trajetória e Velocidade de um Ponto Móvel📚
+## Explorando a Trajetória e Velocidade de um Ponto Móvel🚀
 
 **Autores:** *Adeil Araújo em colaboração com o ChatGPT*
 
